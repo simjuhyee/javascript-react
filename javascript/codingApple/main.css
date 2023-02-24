@@ -1,0 +1,19 @@
+.list-group {display:none;}
+.list-group.on {display:block;}
+
+body.dark {
+  background:#000;
+  color:#fff;
+}
+
+.modal {
+  display:block;
+  visibility:hidden;
+  top: -100%;
+  transition:all 1s;
+}
+.modal.on{
+  top: 0;
+  visibility: visible;
+  opacity:1;
+}
