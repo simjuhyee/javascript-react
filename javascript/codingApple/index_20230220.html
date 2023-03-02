@@ -1,57 +1,74 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello, world!</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-  crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello, world!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
 
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- dark & light -->
+      <a class="navbar-brand" href="#">Navbar</a>
+      <span class="badge bg-dark">Dark</span>
+      <script>
+        let count = 0;
+        document.querySelector('.badge').addEventListener('click', function () {
+          count++
+          if (count % 2 == 0) {
+            document.querySelector('.badge').innerText = 'Dark'
+            document.querySelector('body').classList.remove('dark')
+          } else {
+            document.querySelector('.badge').innerText = 'Light'
+            document.querySelector('body').classList.add('dark')
+          }
+        })
+      </script>
+      <!-- //dark & light -->
 
-        <!-- dark & light -->
-        <a class="navbar-brand" href="#">Navbar</a>
-        <span class="badge bg-dark">Dark</span>
-        <script>
-          let count = 0;
-          document.querySelector('.badge').addEventListener('click', function(){
-            count ++
-            if(count % 2 == 0){
-              document.querySelector('.badge').innerText = 'Dark'
-              document.querySelector('body').classList.remove('dark')
-            }else{
-              document.querySelector('.badge').innerText = 'Light'
-              document.querySelector('body').classList.add('dark')
-            }
-          })
-        </script>
-        <!-- //dark & light -->
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="progressBar-wrap">
+      <div class="progressBar"></div>
+    </div>
 
-        <button class="navbar-toggler" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </nav>
-    <ul class="list-group">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-      <li class="list-group-item">A fourth item</li>
-      <li class="list-group-item">And a fifth one</li>
-    </ul>
+  </nav>
+  <ul class="list-group">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
 
 
-    <button class="login-btn">로그인</button>
 
-    <div class="modal" tabindex="-1">
+  <script>
+    window.addEventListener('scroll', function () {
+      let 실제스크롤2 = document.documentElement.scrollTop //스크롤한 높이
+      let 전체높이 = document.documentElement.scrollHeight - document.documentElement.clientHeight
+      let progressBar = (실제스크롤2 / 전체높이) * 100
+      if (실제스크롤2 > 0) {
+        document.querySelector(".progressBar").style.width = progressBar + "%";
+      }
+    })
+  </script>
+
+  <button class="login-btn" style="margin-top: 100px;">로그인</button>
+
+  <div class="modal" tabindex="-1">
+    <div class="black-bg">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -81,112 +98,196 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <script>
-      document.getElementById('exampleInputEmail1').addEventListener('change', function(){
-        console.log('안녕')
-      })
-    </script>
-
-
-
-    <script>
-      // document.querySelector(".btn_submit").addEventListener('click', function(){
-      //   if(document.querySelectorAll('.form-control')[0].value == '' ||
-      //      document.querySelectorAll('.form-control')[1].value == ''){
-      //     alert("값을 입력해 주세요.")
-      //   }
-      // })
-
-      // $('form').on('submit', function(e){
-      //   if(document.getElementById('exampleInputEmail1').value == '' && document.getElementById('exampleInputPassword1').value == ''){
-      //     alert("1")
-      //     e.preventDefault();
-      //   }else if(document.getElementById('exampleInputEmail1').value == '' || document.getElementById('exampleInputPassword1').value == ''){
-      //     alert('2')
-      //     e.preventDefault();
-      //   }else if(document.getElementById('exampleInputPassword1').value.length <= 6){
-      //     alert('3')
-      //     e.preventDefault();
-      //   }
-      // })
-
-      $('form').on('submit', function(e){
-        let form_value = document.getElementById('exampleInputEmail1').value
-        if(form_value == '' && document.getElementById('exampleInputPassword1').value == ''){
-          alert("값을 입력해 주세요")
-          e.preventDefault();
-        }else if(form_value == '' && /\S+@\S+\.\S+/.test(form_value)){
-          alert('아이디를 입력해 주세요')
-          e.preventDefault();
-        }else if(document.getElementById('exampleInputPassword1').value.length <= 6 || document.getElementById('exampleInputPassword1').value == ''){
-          alert('비밀번호를 입력해 주세요')
-          e.preventDefault();
-        }
-      })
-
-    </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script>
-
-     $('.navbar-toggler').on('click', function(){
-        $('.list-group').toggleClass('on')
-      })
-
-
-      $('.login-btn').on('click', function(){
-        $('.modal').addClass('on')
-      })
-      // document.querySelector('.login-btn').addEventListener('click', function(){
-      //   document.querySelector('.modal').classList.add('on')
-      // })
-
-      // $('.btn-secondary').on('click', function(){
-      //   $('.modal').removeClass('on')
-      // })
-
-      document.querySelector('.btn-secondary').addEventListener('click', function(){
+  <script>
+    document.querySelector('.black-bg').addEventListener('click', function (e) {
+      if (e.target == document.querySelector('.black-bg')) {
         document.querySelector('.modal').classList.remove('on')
-      })
-
-    </script>
-
-    <p>태조 이성계가 태어난 년도는?</p>
-    <input type="text" id="answer">
-    <button id="send-answer">제출</button>
-
-    <script>
-
-      document.querySelector('#send-answer').addEventListener('click', function(){
-        let count = 0;
-        count += 1
-        let answer = document.querySelector('#answer').value
-        if(answer == '1335'){
-          alert('성공')
-        }else if(answer != '1335' && count >= 3){
-          alert('실패')
-        }
-      })
-    </script>
+      }
+    })
+  </script>
 
 
-    <div class="alert alert-danger"><span>5</span>초안에 구매하시면 할인!</div>
 
-    <script>
-      let timer = 5;
-      setInterval(function countDown(){
-        timer -= 1
-        if(0 <= timer){
-          document.querySelector(".alert > span").innerHTML = timer
-        }
-        if(timer == 0){
-          document.querySelector(".alert").style.display = "none"
-        }
-      },1000)
-    </script>
+  <script>
+    // document.querySelector(".btn_submit").addEventListener('click', function(){
+    //   if(document.querySelectorAll('.form-control')[0].value == '' ||
+    //      document.querySelectorAll('.form-control')[1].value == ''){
+    //     alert("값을 입력해 주세요.")
+    //   }
+    // })
 
-  </body>
+    // $('form').on('submit', function(e){
+    //   if(document.getElementById('exampleInputEmail1').value == '' && document.getElementById('exampleInputPassword1').value == ''){
+    //     alert("1")
+    //     e.preventDefault();
+    //   }else if(document.getElementById('exampleInputEmail1').value == '' || document.getElementById('exampleInputPassword1').value == ''){
+    //     alert('2')
+    //     e.preventDefault();
+    //   }else if(document.getElementById('exampleInputPassword1').value.length <= 6){
+    //     alert('3')
+    //     e.preventDefault();
+    //   }
+    // })
+
+    $('form').on('submit', function (e) {
+      let form_value = document.getElementById('exampleInputEmail1').value
+      if (form_value == '' && document.getElementById('exampleInputPassword1').value == '') {
+        alert("값을 입력해 주세요")
+        e.preventDefault();
+      } else if (form_value == '') {
+        alert('아이디를 입력해 주세요')
+        e.preventDefault();
+      } else if (document.getElementById('exampleInputPassword1').value.length <= 6 || document.getElementById('exampleInputPassword1').value == '') {
+        alert('비밀번호를 입력해 주세요')
+        e.preventDefault();
+      }
+    })
+
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script>
+
+    $('.navbar-toggler').on('click', function () {
+      $('.list-group').toggleClass('on')
+    })
+
+
+    $('.login-btn').on('click', function () {
+      $('.modal').addClass('on')
+    })
+    // document.querySelector('.login-btn').addEventListener('click', function(){
+    //   document.querySelector('.modal').classList.add('on')
+    // })
+
+    // $('.btn-secondary').on('click', function(){
+    //   $('.modal').removeClass('on')
+    // })
+
+    document.querySelector('.btn-secondary').addEventListener('click', function () {
+      document.querySelector('.modal').classList.remove('on')
+    })
+
+  </script>
+
+  <p>태조 이성계가 태어난 년도는?</p>
+  <input type="text" id="answer">
+  <button id="send-answer">제출</button>
+
+  <script>
+
+    document.querySelector('#send-answer').addEventListener('click', function () {
+      let count = 0;
+      count += 1
+      let answer = document.querySelector('#answer').value
+      if (answer == '1335') {
+        alert('성공')
+      } else if (answer != '1335' && count >= 3) {
+        alert('실패')
+      }
+    })
+  </script>
+
+
+  <div class="alert alert-danger"><span>5</span>초안에 구매하시면 할인!</div>
+
+  <script>
+    let timer = 5;
+    setInterval(function countDown() {
+      timer -= 1
+      if (0 <= timer) {
+        document.querySelector(".alert > span").innerHTML = timer
+      }
+      if (timer == 0) {
+        document.querySelector(".alert").style.display = "none"
+      }
+    }, 1000)
+  </script>
+
+
+  <div class="slide-wrap">
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="./img/car1.png" alt="">
+      </div>
+      <div class="slide-box">
+        <img src="./img/car2.png" alt="">
+      </div>
+      <div class="slide-box">
+        <img src="./img/car3.png" alt="">
+      </div>
+    </div>
+    <button class="slide-btn slide-prev">이전</button>
+    <button class="slide-btn slide-btn01">1</button>
+    <button class="slide-btn slide-btn02">2</button>
+    <button class="slide-btn slide-btn03">3</button>
+    <button class="slide-btn slide-next">다음</button>
+  </div>
+</body>
+
+<script>
+
+  let 지금사진 = 0
+  document.querySelector('.slide-next').addEventListener('click', function () {
+    document.querySelector('.slide-container').style.transform = 'translateX(-' + 지금사진 + '00vw)'
+    지금사진++
+  })
+
+
+  document.querySelector('.slide-btn01').addEventListener('click', function () {
+    document.querySelector('.slide-container').style.transform = 'translateX(0vw)'
+  })
+  document.querySelector('.slide-btn02').addEventListener('click', function () {
+    document.querySelector('.slide-container').style.transform = 'translateX(-100vw)'
+  })
+  document.querySelector('.slide-btn03').addEventListener('click', function () {
+    document.querySelector('.slide-container').style.transform = 'translateX(-200vw)'
+  })
+</script>
+
+<script>
+  window.addEventListener('scroll', function () {
+    if (window.scrollY <= 100) {
+      document.querySelector('.navbar-brand').style.fontSize = '30px'
+    } else {
+      document.querySelector('.navbar-brand').style.fontSize = '10px'
+    }
+  })
+</script>
+
+
+
+<div class="lorem" style="width:200px; height:100px; overflow-y:scroll;">
+  D:\workspace\testPrj> git push origin master
+  Enumerating objects: 5, done.
+  Counting objects: 100% (5/5), done.
+  Delta compression using up to 12 threads
+  Compressing objects: 100% (5/5), done.
+  Writing objects: 100% (5/5), 1.25 KiB | 1.25 MiB/s, done.
+  Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+  To https://github.com/lgcjh0s/testPrj.git
+  * [new branch] master -> master
+</div>
+<script>
+  document.querySelector('.lorem').addEventListener('scroll', function () {
+    let 스크롤양 = document.querySelector('.lorem').scrollTop;
+    let 실제높이 = document.querySelector('.lorem').scrollHeight;
+    let 높이 = document.querySelector('.lorem').clientHeight;
+    // console.log(스크롤양, 실제높이, 높이)
+    if (스크롤양 + 높이 >= 실제높이) {
+      alert('문서가 끝났습니다.')
+    }
+  })
+</script>
+
+
+<div style="height:1000px;"></div>
+
 </html>
