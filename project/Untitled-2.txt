@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <title>INTEGRITICS</title>
@@ -20,7 +20,7 @@
     <!-- Header -->
     <div id="header">
       <div class="header_in basicCont">
-        <h1 class="logo"><a href="#" class="blind">INTEGRITICS</a></h1>
+        <!-- <h1><a href="#"><img src="./" alt="INTEGRITICS">INTEGRITICS</a></h1> -->
 
         <!-- Menu -->
         <div id="gnb">
@@ -55,22 +55,28 @@
 
     <div id="content">
       <div id="aboutUs" class="section">
+
         <!-- Slider main container -->
-        <div class="swiper-container aboutUs-swiper">
+        <div class="swiper-container">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-              <div class="swiper-content">
-                <span class="sub-title">서브타이트입니다.</span>
-                <h3 class="title">메인타이틀입니다.</h3>
-                <p class="desc">설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.</br> 설명입니다.설명입니다.설명입니다.</p>
-                <a href="#무료체험하기">버튼입니다</a>
-              </div>
-              <img src="https://www.enago.com/academy/kr/wp-content/uploads/sites/10/2017/12/ACAKR-29-1280x720.jpg"
-                alt="임시이미지" style="opacity:0.6;width:100%;height:100%;">
+              <div class="title">Slider with slide progressbar</div>
+              <div class="description">Lorem ipsum dolor sit amet</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="title">Slide 2</div>
+              <div class="description">Lorem ipsum dolor sit amet</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="title">Slide 3</div>
+              <div class="description">Lorem ipsum dolor sit amet</div>
             </div>
           </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
@@ -81,33 +87,9 @@
         </div>
 
       </div>
-      <style>
-        #technology {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
 
-        .item {
-          width: 400px;
-          height: 200px;
-          margin: 50px auto;
-          padding-top: 75px;
-          background: #ccc;
-          text-align: center;
-          color: #FFF;
-          font-size: 3em;
-        }
-      </style>
       <div id="technology" class="section">
-        <div class="item" id="first-item" data-aos-duration="800" data-aos="fade-up">1</div>
-        <div class="item item02" data-aos="fade-up" data-aos-duration="800" data-aos-anchor=".item">2</div>
-        <div class="item item03" data-aos="fade-up" data-aos-duration="800" data-aos-anchor=".item02">3</div>
-        <div class="item item04" data-aos="fade-up" data-aos-duration="800" data-aos-anchor=".item03">4</div>
-        <div class="item item05" data-aos="fade-up" data-aos-duration="800" data-aos-anchor=".item04">1</div>
-        <div class="item item06" data-aos="fade-up" data-aos-duration="800" data-aos-anchor=".item05">2</div>
-        <div class="item item07" data-aos="fade-up" data-aos-duration="800" data-aos-anchor=".item06">3</div>
-        <div class="item item08" data-aos="fade-up" data-aos-duration="800" data-aos-anchor=".item07">4</div>
+
       </div>
 
       <div id="member" class="section">
@@ -123,7 +105,6 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="./js/main.js"></script>
 </body>
 

@@ -1,0 +1,365 @@
+#wrap {
+  width: 100%;
+  min-width: 320px;
+}
+.basicCont {
+  width: 92%;
+  margin: 0 auto;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.4s ease;
+}
+#header.fixed {
+  background: rgba(0, 0, 0, 0.7);
+  top: -20px;
+  transition: all 0.4s ease;
+}
+#header .header_in {
+  position: relative;
+  padding: 40px 0 20px;
+}
+#header .header_in h1 {
+  display: inline-block;
+  width: 110px;
+  height: 55px;
+  background-color: #fff;
+}
+#header .header_in h1 img {
+  transition: all 0.4s ease;
+}
+#header .header_in a.sitemap {
+  display: none;
+}
+#header.fixed .header_in h1 img {
+  width: 85px;
+  transition: all 0.4s ease;
+}
+
+#gnb {
+  position: absolute;
+  right: 0;
+  top: 65px;
+  transition: all 0.4s ease;
+}
+#gnb .menu {
+}
+#gnb .menu li {
+  display: inline-block;
+  margin-right: 40px;
+}
+#gnb .menu li:last-child {
+  margin-right: 0;
+}
+#gnb .menu li a {
+  position: relative;
+  font-family: "Poppins", Malgun Gothic, "Malgun Gothic", sans-serif;
+  font-weight: bold;
+  color: #000;
+  line-height: 1;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+#gnb .menu li a:hover {
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+#gnb .menu li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: all 0.4s ease;
+}
+#gnb .menu li a.mPS2id-highlight::after {
+  width: 100%;
+  transition: all 0.4s ease;
+}
+
+#header.fixed #gnb {
+  top: 55px;
+  transition: all 0.4s ease;
+}
+
+/* 슬라이드 메뉴 : 모바일 메뉴 */
+.noScroll {
+  overflow: hidden;
+}
+#menuArea {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  overflow-x: hidden;
+  z-index: 9999999999;
+  height: 100%;
+  max-width: 100%;
+  transition: all 0.6s;
+}
+#menuArea .menuList {
+  position: absolute;
+  right: -500px;
+  height: 100%;
+  width: 500px;
+  background: #fff;
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-width: 100%;
+  transition: all 1s;
+}
+#menuArea .menuList h1 {
+  position: relative;
+  padding: 40px 25px 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#menuArea .menuList h1 img {
+  height: 60px;
+}
+
+#menuArea .menuList .btnMenu_mClose {
+  position: absolute;
+  right: 20px;
+  top: 52px;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;
+}
+#menuArea .menuList .btnMenu_mClose .material-symbols-outlined {
+  font-size: 33px;
+  color: #222;
+}
+#menuArea .menuList > .list {
+  background-color: #fff;
+  width: 100%; /* border-top:1px solid #ddd; */
+}
+#menuArea .menuList > .list > li {
+  background: #fff; /* border-bottom:1px solid #ddd; */
+}
+#menuArea .menuList > .list > li > a {
+  position: relative;
+  padding: 17px 25px;
+  display: block;
+  font-size: 1.1rem;
+  line-height: 100%;
+  color: #222;
+  text-decoration: none !important;
+  font-weight: 500;
+  letter-spacing: -0.5pt;
+  z-index: 10;
+}
+
+#menuArea .menuList > .list > li > a span.material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  color: #000;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+#menuArea .menuList > .list .sMenu {
+  background-color: #fff;
+  position: relative;
+  padding: 0 30px 15px;
+  display: none;
+}
+#menuArea .menuList > .list .sMenu > li {
+}
+#menuArea .menuList > .list .sMenu > li > a {
+  position: relative;
+  display: block;
+  padding: 3px 0 3px 0;
+  border: none;
+  color: #777;
+  font-size: 14px;
+}
+#menuArea .menuList > .list .sMenu > li > a:hover {
+  color: #000;
+  transition: all 0.2s linear;
+  text-decoration: underline;
+}
+
+#menuArea .menuList > .list .sMenu li:first-child a {
+  padding-top: 0;
+}
+#menuArea .menuList > .list .sMenu li:last-child a {
+  padding-bottom: 0;
+}
+
+#grayLayer {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+}
+#grayLayer > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 슬라이드 메뉴 : 모바일 메뉴 */
+
+.aboutUs-swiper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 900px;
+}
+.swiper-slide {
+  position: relative;
+}
+.swiper-content {
+  position: absolute;
+}
+.swiper-progress-bar {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 1;
+  height: 2px;
+}
+.swiper-progress-bar .slide_progress-bar {
+  position: absolute;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  width: auto;
+  clear: both;
+  bottom: 45px;
+  left: 0;
+  right: 0;
+}
+.swiper-progress-bar .slide_progress-bar:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  height: 100%;
+  width: 0;
+  content: "";
+  transition: 0.1s width linear;
+}
+.swiper-progress-bar .slide_progress-bar.active .slide_progress-bar {
+  opacity: 1;
+}
+.swiper-progress-bar.animate .slide_progress-bar:after {
+  transition: width linear;
+  transition-delay: unset;
+  width: 100%;
+  transition-duration: 5s;
+}
+
+@media all and (max-width: 980px) {
+  #header .header_in a.sitemap {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 30px;
+  }
+  #header .header_in a.sitemap span {
+    font-size: 30px;
+  }
+
+  #header.fixed {
+    top: 0;
+  }
+  #gnb {
+    display: none;
+  }
+}
+
+#header .header_in {
+  font-size: 13px;
+  padding: 15px 0;
+}
+#header .header_in h1 img {
+  width: 60px !important;
+}
+#header .header_in a.sitemap {
+  top: 20px;
+}
+#header .header_in a.sitemap span {
+  font-size: 26px;
+}
+
+#menuArea.on {
+  display: block;
+}
+#menuArea.on .menuList {
+  right: 0;
+}
+#menuArea .menuList h1 {
+  padding: 30px 20px;
+}
+/* #menuArea .menuList h1 img {width:150px;} */
+#menuArea .menuList > .list > li > a {
+  padding: 15px 20px;
+}
+#menuArea .menuList > .list > li > a span.material-symbols-outlined {
+  font-size: 18px;
+}
+#menuArea .menuList > .list .sMenu {
+  padding: 0px 20px 10px;
+}
+#menuArea .menuList .btnMenu_mClose {
+  font-size: 12px;
+  line-height: 40px;
+}
+
+#footer .footer {
+  padding: 70px 0;
+}
+#footer .footer .foot_info {
+  margin: 0 0 45px;
+}
+#footer .footer .foot_info h3 {
+  font-size: 2.4rem;
+}
+#footer .footer .foot_info p {
+  font-size: 1rem;
+  margin: 8px 0 20px;
+}
+#footer .footer .foot_info .sns li {
+  margin-right: 5px;
+}
+#footer .footer .foot_info .sns li a {
+  width: 35px;
+  height: 35px;
+  background-size: 100% !important;
+}
+
+#footer .footer .foot_form h4 {
+  font-size: 1.5rem;
+}
+
+#footer .copy {
+  padding: 25px 0 45px;
+  text-align: center;
+}
+#footer .copy a.topBtn {
+  display: block;
+  position: relative;
+  width: 77px;
+  top: 0;
+  margin: 10px auto 0;
+}
