@@ -22,13 +22,13 @@
 }
 #header .header_in {
   position: relative;
-  padding: 40px 0 20px;
 }
 #header .header_in h1 {
   display: inline-block;
-  width: 110px;
-  height: 55px;
-  background-color: #fff;
+  width: 255px;
+  height: 22px;
+  padding: 70px 0;
+  background: url(../img/logo.jpg) no-repeat center;
 }
 #header .header_in h1 img {
   transition: all 0.4s ease;
@@ -44,7 +44,7 @@
 #gnb {
   position: absolute;
   right: 0;
-  top: 65px;
+  top: 75px;
   transition: all 0.4s ease;
 }
 #gnb .menu {
@@ -58,7 +58,7 @@
 }
 #gnb .menu li a {
   position: relative;
-  font-family: "Poppins", Malgun Gothic, "Malgun Gothic", sans-serif;
+ 
   font-weight: bold;
   color: #000;
   line-height: 1;
@@ -231,10 +231,60 @@
 }
 .swiper-content {
   position: absolute;
+  top: 286px;
+  left: 320px;
+  color: #fff;
+}
+
+.sub-title {
+  animation: slide_info .8s forwards;
+  margin-left: 60px;
+  font-size: 20px;
+  opacity: 0;
+}
+.swiper-slide-active .sub-title {
+  animation: slide_info .8s forwards;
+}
+.title {
+  margin-left: 100px;
+  font-size: 56px;
+  margin-top: 28px;
+  opacity: 0;
+}
+.swiper-slide-active .title {
+  animation: slide_info .8s forwards;
+  animation-delay: 0.3s;
+}
+.desc {
+  margin-left: 100px;
+  margin-top: 37px;
+  font-size: 26px;
+  line-height: 40px;
+  opacity: 0;
+}
+.swiper-slide-active .desc {
+  animation: slide_info .8s forwards;
+  animation-delay: 0.6s;
+}
+
+.swiper-btn {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin-top: 170px;
+  background-color: #000;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 48px;
+  color: #fff;
+
 }
 .swiper-progress-bar {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  top: 610px;
+  left: 320px;
+  width: 205px;
   display: block;
   z-index: 1;
   height: 2px;
@@ -242,18 +292,35 @@
 .swiper-progress-bar .slide_progress-bar {
   position: absolute;
   height: 2px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.3);
   width: auto;
   clear: both;
   bottom: 45px;
   left: 0;
   right: 0;
 }
+
+.swiper-button-prev, .swiper-button-next {
+  left: 570px !important;
+  top: 564px !important;
+  display: inline-block;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.4);
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: inherit !important;
+}
+.swiper-button-next {
+    left: 630px !important;
+}
+
 .swiper-progress-bar .slide_progress-bar:after {
   position: absolute;
   top: 0;
   left: 0;
-  background: #000;
+  background: #fff;
   height: 100%;
   width: 0;
   content: "";
@@ -269,97 +336,13 @@
   transition-duration: 5s;
 }
 
-@media all and (max-width: 980px) {
-  #header .header_in a.sitemap {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 30px;
+
+@keyframes slide_info {
+  0% {
+      opacity: 0;
   }
-  #header .header_in a.sitemap span {
-    font-size: 30px;
+  100% {
+      opacity: 1;
+      margin-left: 0;
   }
-
-  #header.fixed {
-    top: 0;
-  }
-  #gnb {
-    display: none;
-  }
-}
-
-#header .header_in {
-  font-size: 13px;
-  padding: 15px 0;
-}
-#header .header_in h1 img {
-  width: 60px !important;
-}
-#header .header_in a.sitemap {
-  top: 20px;
-}
-#header .header_in a.sitemap span {
-  font-size: 26px;
-}
-
-#menuArea.on {
-  display: block;
-}
-#menuArea.on .menuList {
-  right: 0;
-}
-#menuArea .menuList h1 {
-  padding: 30px 20px;
-}
-/* #menuArea .menuList h1 img {width:150px;} */
-#menuArea .menuList > .list > li > a {
-  padding: 15px 20px;
-}
-#menuArea .menuList > .list > li > a span.material-symbols-outlined {
-  font-size: 18px;
-}
-#menuArea .menuList > .list .sMenu {
-  padding: 0px 20px 10px;
-}
-#menuArea .menuList .btnMenu_mClose {
-  font-size: 12px;
-  line-height: 40px;
-}
-
-#footer .footer {
-  padding: 70px 0;
-}
-#footer .footer .foot_info {
-  margin: 0 0 45px;
-}
-#footer .footer .foot_info h3 {
-  font-size: 2.4rem;
-}
-#footer .footer .foot_info p {
-  font-size: 1rem;
-  margin: 8px 0 20px;
-}
-#footer .footer .foot_info .sns li {
-  margin-right: 5px;
-}
-#footer .footer .foot_info .sns li a {
-  width: 35px;
-  height: 35px;
-  background-size: 100% !important;
-}
-
-#footer .footer .foot_form h4 {
-  font-size: 1.5rem;
-}
-
-#footer .copy {
-  padding: 25px 0 45px;
-  text-align: center;
-}
-#footer .copy a.topBtn {
-  display: block;
-  position: relative;
-  width: 77px;
-  top: 0;
-  margin: 10px auto 0;
 }

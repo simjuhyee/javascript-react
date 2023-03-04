@@ -1,0 +1,9 @@
+$(document).ready(function () {
+  prevent_a();
+});
+
+function prevent_a() {
+  $(document).on("click", 'a[href="#"]', function (e) {
+    e.preventDefault();
+  });
+}

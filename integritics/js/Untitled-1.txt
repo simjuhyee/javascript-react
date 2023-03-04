@@ -1,0 +1,219 @@
+var scrollTop, // �ㅽ겕濡� �믪씠
+  gnbTop, // GNB Top
+  lnbTop, // LNB Top
+  win_w, // �덈룄�� �볦씠 - 硫붿씤
+  win_h, // �덈룄�� �믪씠 - 硫붿씤
+  lyNums = 0, // �덉씠�댁뿉 �ъ슜
+  lyOne = 0; // �덉씠�댁뿉 �ъ슜
+
+var pgCode, depth_1, depth_2, depth_3, depth_4;
+
+$(window).load(function () {
+  // �ㅽ뵂�� 吏��뚯빞��
+  $("body").append("");
+
+  // �쇱そ硫붾돱�닿린_紐⑤컮��
+  $("body").on("click ", ".btnMenu_m", function () {
+    winH = $(window).height();
+    $("#menuArea").fadeIn(300);
+    TweenLite.to($("#menuArea .menuList"), 0.3, { right: 0, delay: 0.3 });
+    $("body").append("<div id='grayLayer'><a href='#'></a></div>");
+    $("#grayLayer").show();
+  });
+
+  // �쇱そ硫붾돱�リ린_紐⑤컮��
+  $("body").on("click ", "#menuArea .btnMenu_mClose", function () {
+    $("#menuArea").fadeOut(300);
+    TweenLite.to($("#menuArea .menuList"), 0.3, { right: -500 });
+    $("#grayLayer").remove();
+  });
+
+  // wrap�대┃�� 硫붾돱�リ린
+  $("body").on("click ", ".dropdown-toggle", function () {
+    $("#menuArea").fadeOut(300);
+    TweenLite.to($("#menuArea .menuList"), 0.3, { right: -500 });
+    $("#grayLayer").remove();
+  });
+
+  // �쇱そ �섏쐞 硫붾돱
+  $("body").on("click ", "#menuArea .menuList>.list>li", function () {
+    var idx = $("#menuArea .menuList>.list>li").index($(this));
+    $("#menuArea .menuList>.list>li").each(function (index) {
+      if (idx == index) {
+        if (!$(this).hasClass("active")) {
+          $(this).addClass("active");
+          $(this).find(".sMenu").slideDown(300);
+        } else {
+          $(this).removeClass("active");
+          $(this).find(".sMenu").slideUp(300);
+        }
+      } else {
+        $(this).removeClass("active");
+        $(this).find(".sMenu").slideUp(300);
+      }
+    });
+  });
+
+  $(window)
+    .on("throttledresize", function () {
+      $(".depth3Menu .depth3sub").attr("style", ""); //
+    })
+    .resize();
+});
+
+// Header Fixed
+$(window).scroll(function () {
+  var top = $(this).scrollTop();
+  if (top > 0) {
+    headerFixed();
+  } else {
+    headerTop();
+  }
+});
+
+function headerFixed() {
+  var header = $("#header");
+  $(header).addClass("fixed");
+  return false;
+}
+
+function headerTop() {
+  var header = $("#header");
+  $(header).removeClass("fixed");
+  return false;
+}
+// Header Fixed
+
+$(function () {
+  //PC �ㅽ겕濡� 遺��쒕읇寃�
+  $("#gnb .menu li a, .dropdown-toggle, .scrollBtn").mPageScroll2id({
+    scrollSpeed: 900,
+    highlightSelector: "#gnb .menu li a",
+  });
+  //PC �ㅽ겕濡� 遺��쒕읇寃�
+
+  // �묐쾭�� �대┃�� �곷떒 �대룞
+  $(".topBtn").click(function () {
+    $("html,body").animate({ scrollTop: 0 }, 800, "easeInCubic");
+  });
+  // �묐쾭�� �대┃�� �곷떒 �대룞
+
+  // 硫붿씤 �숈쁺�� �ㅽ겕由쏀듃
+  $(".jarallax").jarallax({
+    speed: 1,
+    videoVolume: 0,
+  });
+  // 硫붿씤 �숈쁺�� �ㅽ겕由쏀듃
+});
+
+$(document).ready(function () {
+  $("#scrollWrap").addClass("action");
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 硫붿씤 鍮꾩＜�� �띿뒪�� zoon �④낵
+  let showcase = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#scrollWrap",
+      start: "top top",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+  showcase
+    .fromTo(
+      ".showcase__title",
+      { position: "absolute", scale: 0.038 },
+      { position: "fixed", margin: "0", scale: 1, duration: 1 }
+    )
+    .fromTo(".showcase", { opacity: 1 }, { opacity: 0, duration: 0.3 });
+
+  var textArea = document.querySelector("#visual .textArea");
+  var scrollBtn = document.querySelector(".scrollBtn");
+  let showcase_visual = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#visual",
+      start: "top top",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+  showcase_visual.to([textArea, scrollBtn], { opacity: 0.2, duration: 0.5 });
+  // 硫붿씤 鍮꾩＜�� �띿뒪�� zoon �④낵
+
+  // �띿뒪�� 媛�濡� �ㅽ겕濡ㅻ쭅 �④낵
+  gsap.utils.toArray("section").forEach((section, index) => {
+    const w = section;
+    const [x, xEnd] =
+      index % 2
+        ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
+        : [w.scrollWidth * -1, 0];
+    gsap.fromTo(
+      w,
+      { x },
+      {
+        x: xEnd,
+        scrollTrigger: {
+          trigger: section,
+          scrub: 0.5,
+        },
+      }
+    );
+  });
+  // �띿뒪�� 媛�濡� �ㅽ겕濡ㅻ쭅 �④낵
+
+  // What We Do �щ씪�대뱶
+  $(".we_do_in").slick({
+    arrows: true,
+    autoplay: false,
+    speed: 1000,
+    autoplaySpeed: 5000, // �щ씪�대뱶 �띾룄
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    swipeToSlide: true,
+    infinite: false,
+    zIndex: 50,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+});
+
+// �ㅽ겕濡ㅼ뿉 �곕Ⅸ �④낵
+(function ($) {
+  $(window).on("scroll", function () {
+    $(".ani_effect").each(function (index, elem) {
+      if (
+        $(window).scrollTop() >
+        $(elem).offset().top - $(window).height() / 1.4
+      ) {
+        var $this = $(this);
+        $this.addClass("action");
+      }
+      if (
+        $(window).scrollTop() >
+        $(elem).offset().top - $(window).height() / 1.4
+      ) {
+        var $this = $(this);
+        $this.addClass("action");
+      } else {
+        var $this = $(this);
+        $this.removeClass("action");
+      }
+    });
+  });
+})(jQuery);
