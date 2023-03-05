@@ -83,23 +83,53 @@ var swiper = new Swiper(".visual_swiper", {
   speed: 1000,
   loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".visual_swiper .swiper-button-next",
+    prevEl: ".visual_swiper .swiper-button-prev",
   },
   on: {
     init: function () {
-      $(".swiper-progress-bar").removeClass("animate");
-      $(".swiper-progress-bar").removeClass("active");
-      $(".swiper-progress-bar").eq(0).addClass("animate");
-      $(".swiper-progress-bar").eq(0).addClass("active");
+      $(".visual_swiper .swiper-progress-bar").removeClass("animate");
+      $(".visual_swiper .swiper-progress-bar").removeClass("active");
+      $(".visual_swiper .swiper-progress-bar").eq(0).addClass("animate");
+      $(".visual_swiper .swiper-progress-bar").eq(0).addClass("active");
     },
     slideChangeTransitionStart: function () {
-      $(".swiper-progress-bar").removeClass("animate");
-      $(".swiper-progress-bar").removeClass("active");
-      $(".swiper-progress-bar").eq(0).addClass("active");
+      $(".visual_swiper .swiper-progress-bar").removeClass("animate");
+      $(".visual_swiper .swiper-progress-bar").removeClass("active");
+      $(".visual_swiper .swiper-progress-bar").eq(0).addClass("active");
     },
     slideChangeTransitionEnd: function () {
-      $(".swiper-progress-bar").eq(0).addClass("animate");
+      $(".visual_swiper .swiper-progress-bar").eq(0).addClass("animate");
+    },
+  },
+});
+
+
+var swiper = new Swiper(".main_swiper", {
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  speed: 1000,
+  loop: true,
+  navigation: {
+    nextEl: ".main_swiper .swiper-button-next",
+    prevEl: ".main_swiper .swiper-button-prev",
+  },
+  on: {
+    init: function () {
+      $(".main_swiper .swiper-progress-bar").removeClass("animate");
+      $(".main_swiper .swiper-progress-bar").removeClass("active");
+      $(".main_swiper .swiper-progress-bar").eq(0).addClass("animate");
+      $(".main_swiper .swiper-progress-bar").eq(0).addClass("active");
+    },
+    slideChangeTransitionStart: function () {
+      $(".main_swiper .swiper-progress-bar").removeClass("animate");
+      $(".main_swiper .swiper-progress-bar").removeClass("active");
+      $(".main_swiper .swiper-progress-bar").eq(0).addClass("active");
+    },
+    slideChangeTransitionEnd: function () {
+      $(".main_swiper .swiper-progress-bar").eq(0).addClass("animate");
     },
   },
 });
