@@ -39,7 +39,7 @@
 #menuArea .menuList h1 {position:relative; padding:40px 25px 30px; box-sizing:border-box; overflow:hidden;}
 #menuArea .menuList h1 img {height:60px;}
 
-#menuArea .menuList .btnMenu_mClose {position:absolute; right:20px; top:52px; font-size:0; border:0; cursor:pointer;}
+#menuArea .menuList .btnMenu_mClose {z-index:2; position:absolute; right:20px; top:20px; font-size:0; border:0; cursor:pointer;}
 #menuArea .menuList .btnMenu_mClose .close {display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;}
 #menuArea .menuList .btnMenu_mClose .close:before,
 #menuArea .menuList .btnMenu_mClose .close:after {content:'';position: absolute;left: 50%;height: 20px;width: 2px;background-color: #000;}
@@ -65,7 +65,7 @@
 
 
 /* section common */
-.section {position: relative;}
+.section {position: relative; overflow:hidden;}
 .section_inner {padding: 105px 0;}
 .section .text_box .section_title {position: relative; display: inline-block; font-size: 76px; line-height: 96px; font-weight: bold;}
 .section .text_box .section_title.dot::after {content: ''; position: absolute; bottom: 72px; right: -28px; width: 20px; height: 20px; border-radius: 50%; background-color: #ff505a;}
@@ -99,13 +99,13 @@
 .visual_swiper .swiper_controller .swiper-button-prev, .visual_swiper .swiper_controller .swiper-button-next {position: static !important; display: inline-block;width: 44px !important;height: 44px !important; margin: 0 10px 0 0 !important; border-radius: 50%;background-color: rgba(0,0,0,0.4); text-align: center; line-height: 44px; color: #fff;}
 .visual_swiper .swiper_controller .swiper-button-next:after, .visual_swiper .swiper_controller .swiper-button-prev:after {font-size: inherit !important;}
 .visual_swiper .swiper_controller .swiper-button-next {left: 630px !important;}
-
 /* section aubout us */
 
 /* section member */
 .section#technology .section_inner {padding-bottom: 900px;}
 /* section member */
 
+/* section main-swiper */
 .main_swiper {position: relative; overflow: hidden; width: 100%; height: 900px;}
 .main_swiper .swiper-slide {position: relative;}
 .main_swiper .swiper-slide .slide_txt {position: absolute;top: 50%;left: 50%; width: 1630px; padding-bottom: 300px; color: #000; transform: translate(-50%, -50%)}
@@ -118,11 +118,39 @@
 .main_swiper .swiper-slide-active .slide_txt p {animation: slide_info 1s forwards;animation-delay: 0.6s;}
 .main_swiper .swiper-slide .slide_txt .slide_btn {position: absolute; bottom: 0; left: 0; z-index: 3; padding: 15px 30px; margin-top: 170px;background-color: #000;border-radius: 50px;text-align: center;font-size: 12px;color: #fff;
 }
-
 .main_swiper .swiper_controller {z-index: 3; position: absolute; bottom: 10%; left: 50%; width: 1630px; transform: translate(-50%, 0%)}
 .main_swiper .swiper_controller .swiper-button-prev, .main_swiper .swiper_controller .swiper-button-next {position: static !important; display: inline-block;width: 90px !important;height: 90px !important; margin: 50px 10px 0 0 !important; border-radius: 15px;background-color: rgba(0,0,0,0.4); text-align: center; line-height: 90px; color: #fff;}
 .main_swiper .swiper_controller .swiper-button-next:after, .main_swiper .swiper_controller .swiper-button-prev:after {font-size: inherit !important;}
 .main_swiper .swiper_controller .swiper-button-next {left: 630px !important;}
+/* section main-swiper */
+
+
+/* section service */
+.service_list {display:flex; flex-wrap: wrap; justify-content:flex-start; margin:122px 0 0 -20px;}
+.service_list li {position:relative; width: calc(25% - 20px); height: 183px; margin:0 0 20px 20px; padding: 60px 36px; border-radius: 20px;  font-size:25px; box-shadow: 4px 4px 8px rgb(0 0 0 / 10%);}
+.service_list li p {position:relative; z-index:2;}
+.service_list li::after {content: ''; position: absolute; bottom: 22px; right: 22px; width: 47px; height:45px; background: url(../img/list_item.jpg) no-repeat center;}
+/* section service */
+
+/* section member */
+.section#member .basicCont {width: 1660px;}
+.profile_swiper {width: calc(100% + 30px); margin:115px 0 0 -30px;}
+.profile_swiper .swiper-wrapper {display:flex; flex-wrap: wrap; justify-content:flex-start;}
+.profile_swiper .swiper-wrapper .swiper-slide {width: calc(20% - 30px); height:420px; margin:30px 0 0 30px; border-radius:30px; box-shadow: 4px 4px 8px rgb(0 0 0 / 10%);}
+.profile_swiper .swiper-slide .profile {position:relative; display:flex; flex-direction: column; align-items:center; height:100%; padding:40px 0 27px; text-align:center;}
+.profile_swiper .swiper-slide .profile .profile_img {width:130px; height:130px; background:url(../img/profile_img.jpg) center no-repeat;}
+.profile_swiper .swiper-slide .profile .profile_team {margin-top:25px; font-size:12px; color:#4a82e5;}
+.profile_swiper .swiper-slide .profile .profile_name {position:relative; margin-top: 15px; padding-top: 20px; font-size:16px; font-weight:600;}
+.profile_swiper .swiper-slide .profile .profile_name::after {content: ''; position: absolute; top: 0; left: 50%; width:30px; height:1px; background-color:#e6e6e6; transform: translateX(-50%);}
+.profile_swiper .swiper-slide .profile .profile_rank {margin-top:8px; font-size:12px; color:#6b7684;}
+
+.profile_swiper .swiper-slide .profile_social { position: absolute; bottom: 27px; left:50%; display:inline-block; transform: translateX(-50%);}
+.profile_swiper .swiper-slide .profile_social a {display:inline-block; width: 25px; height:25px; margin-left:24px; font-size:0; background-color:#4a82e5;}
+.profile_swiper .swiper-slide .profile_social a:first-child {margin-left:0;}
+.profile_swiper .swiper_controller {display:none;}
+/* section member */
+
+
 
 @keyframes slide_info {
   0% {
@@ -131,7 +159,7 @@
   100% {
       opacity: 1;
       margin-left: 0;
-  
+
     }
   }
 
@@ -140,10 +168,10 @@
 /*******************************************************************************
 	@media ~1700px
 *******************************************************************************/
-@media all and (max-width:1700px) { 
+@media all and (max-width:1700px) {
 
 
-.basicCont {width:92%;}
+.basicCont {width:92% !important;}
 
 
 #footer .footer .foot_info {width:400px;}
@@ -154,33 +182,26 @@
 /*******************************************************************************
 	@media ~1300px
 *******************************************************************************/
-@media all and (max-width:1300px) { 
+@media all and (max-width:1300px) {
 
 #gnb .menu li {margin-right:25px;}
 
+.service_list li {position:relative; width: calc(33.333% - 20px); height:auto;}
 
+.profile_swiper .swiper-wrapper .swiper-slide {width: calc(33.333% - 30px);}
 }
 /*******************************************************************************
 	@media ~1100px
 *******************************************************************************/
-@media all and (max-width:1100px) { 
+@media all and (max-width:1100px) {
 
 
 }
 /*******************************************************************************
 	@media 769~980px
 *******************************************************************************/
-@media all and (max-width:980px) { 
-
-
+@media all and (max-width:980px) {
 #wrap{font-size:15px; font-weight:400;}
-
-.compad {padding:160px 0; box-sizing:border-box;}
-.compad_t {padding:160px 0 0; box-sizing:border-box;}
-.compad_b {padding:0 0 160px; box-sizing:border-box;}
-
-
-#cursor {display:none;}
 
 #header .header_inner {padding:20px 0;}
 #header .header_inner h1 img {width:85px !important;}
@@ -190,12 +211,18 @@
 #header.fixed {top:0;}
 #gnb {display:none;}
 
+.service_list li {position:relative; width: calc(50% - 20px);}
+
+.profile_swiper {margin: 115px 0 0 0;}
+.profile_swiper .swiper_controller {display:block;}
+.profile_swiper .swiper-wrapper {flex-wrap: nowrap; }
+.profile_swiper .swiper-wrapper .swiper-slide {margin-left:0;}
 }
 
 /*******************************************************************************
 	@media 481~680px
 *******************************************************************************/
-@media all and (max-width:680px) { 
+@media all and (max-width:680px) {
 
 
 #wrap{font-size:13px; font-weight:400;}
@@ -211,7 +238,8 @@
 #menuArea .menuList>.list .sMenu {padding:0px 20px 10px;}
 #menuArea .menuList .btnMenu_mClose {font-size:12px; line-height:40px;}
 
-
+.service_list {margin:122px 0 0 0;}
+.service_list li {position:relative; width: 100%; margin-left:0;}
 }
 
 

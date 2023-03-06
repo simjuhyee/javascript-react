@@ -11,7 +11,7 @@ function prevent_a() {
     var target = this.hash;
     var $target = $(target);
     var menu_h = document.querySelector("#header").clientHeight
-    
+
     $("html, body")
       .stop()
       .animate(
@@ -29,9 +29,9 @@ function prevent_a() {
   });
 
   $(window).on('scroll', function(){
-    
     for(let i = 0; i < 4; i++){
-      if($(window).scrollTop() >= $('.section').eq(i).offset().top){
+      var menu_h = document.querySelector("#header").clientHeight
+      if($(window).scrollTop() + (menu_h * 2) >= $('.anc').eq(i).offset().top){
         $('.menu > li').eq(i).children().addClass('on')
         $('.menu > li').eq(i).siblings().children().removeClass('on')
       }
@@ -75,7 +75,7 @@ function headerTop() {
 }
 // Header Fixed
 
-var swiper = new Swiper(".visual_swiper", {
+var visual_swiper = new Swiper(".visual_swiper", {
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
@@ -105,7 +105,7 @@ var swiper = new Swiper(".visual_swiper", {
 });
 
 
-var swiper = new Swiper(".main_swiper", {
+var main_swiper = new Swiper(".main_swiper", {
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
@@ -134,9 +134,36 @@ var swiper = new Swiper(".main_swiper", {
   },
 });
 
+
+var ww = $(window).width();
+function initSwiper() {
+  var profile_swiper = new Swiper(".profile_swiper", {
+    slidesPerView: 1.5,
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}
+if (ww < 980) {
+  initSwiper();
+} else if (ww >= 980) {
+  // swiper 실행 안함
+}
+
+$(window).on('resize', function () {
+  ww = $(window).width();
+  if (ww < 980) {
+    initSwiper();
+  }
+});
+
+
 AOS.init({
-  duration: 1200,
-  delay: 500,
+  duration: 1300,
 });
 
 

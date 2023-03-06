@@ -8,8 +8,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./fonts/font.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2a4fb7723234cf9cd4227306526ff667"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
   <title>INTEGRITICS</title>
 </head>
@@ -18,13 +20,13 @@
   <div id="wrap">
 
     <!-- Header -->
-    <div id="header"> 
+    <div id="header">
       <div class="header_inner basicCont">
         <h1 class="logo"><a href="/" class="blind">INTEGRITICS</a></h1>
-  
+
         <!-- Menu -->
         <div id="gnb">
-          <ul class="menu"> 
+          <ul class="menu">
             <li><a href="#aboutUs">회사소개</a></li>
             <li><a href="#technology">기능소개</a></li>
             <li><a href="#member">구성팀원</a></li>
@@ -36,33 +38,33 @@
       </div>
     </div>
     <!--//Header -->
-  
-  
+
+
     <!--[s] 모바일 menuArea -->
     <div id="menuArea">
       <div class="menuList">
         <h1 class="m_logo"><a href="/"></a></h1>
         <a class="btnMenu_mClose"><span class="close"></span></a>
-        <ul class="list">				
+        <ul class="list">
           <li><a href="#aboutUs">회사소개</a></li>
-            <li><a href="#technology">기능소개</a></li>
-            <li><a href="#member">구성팀원</a></li>
-            <li><a href="#contactUs">문의하기</a></li>
+          <li><a href="#technology">기능소개</a></li>
+          <li><a href="#member">구성팀원</a></li>
+          <li><a href="#contactUs">문의하기</a></li>
         </ul>
       </div>
     </div>
     <!--[e] 모바일 menuArea -->
-      
+
     <div id="content">
       <div class="section">
         <div class="swiper-container visual_swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="slide_txt">
-                  <span>서브타이트입니다.</span>
-                  <h3>메인타이틀입니다.</h3>
-                  <p>설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.</br> 설명입니다.설명입니다.설명입니다.</p>
-                  <a class="slide_btn" href="#무료체험하기">버튼입니다</a>
+                <span>서브타이트입니다.</span>
+                <h3>메인타이틀입니다.</h3>
+                <p>설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.</br> 설명입니다.설명입니다.설명입니다.</p>
+                <a class="slide_btn" href="#무료체험하기">버튼입니다</a>
               </div>
             </div>
           </div>
@@ -76,7 +78,7 @@
         </div>
       </div>
 
-      <div id="aboutUs" class="section">
+      <div id="aboutUs" class="section anc">
         <div class="section_inner basicCont">
           <div class="text_box">
             <h3 class="section_title dot" data-aos="fade-up">일이삼사</h3>
@@ -99,7 +101,7 @@
         </div>
       </div>
 
-      <div  id="technology" class="section">
+      <div id="technology" class="section anc">
         <div class="section_inner basicCont">
           <div class="text_box">
             <h3 class="section_title dot" data-aos="fade-up">일이삼사</h3>
@@ -136,46 +138,180 @@
           </div>
         </div>
       </div>
-      
+
       <div class="section">
         <div class="section_inner basicCont">
           <div class="text_box">
-            <h3 class="section_title dot">일이삼<br>일이삼사오육칠팔구십</h3>
-            <p class="section_sub-title">일이삼사오육칠팔구십일이삼사오육<br>일이삼사오육칠팔</p>
+            <h3 class="section_title dot" data-aos="fade-up">일이삼<br>일이삼사오육칠팔구십</h3>
+            <p class="section_sub-title" data-aos="fade-up">일이삼사오육칠팔구십일이삼사오육<br>일이삼사오육칠팔</p>
           </div>
-          <ul class="list">
-            <li class="">
-              <p class="">일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
+          <ul class="service_list">
+            <li class="list_item01" data-aos="fade">
+              <p>일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
             </li>
-            <li class="">
-              <p class="">일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
+            <li class="list_item02" data-aos="fade-up" data-aos-delay="300">
+              <p>일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
             </li>
-            <li class="">
-              <p class="">일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
+            <li class="list_item03" data-aos="fade-up" data-aos-delay="500">
+              <p>일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
             </li>
-            <li class="">
-              <p class="">일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
+            <li class="list_item04" data-aos="fade-up" data-aos-delay="700">
+              <p>일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
             </li>
-            <li class="">
-              <p class="">일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
+            <li class="list_item05" data-aos="fade-up" data-aos-delay="800">
+              <p>일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
             </li>
-            <li class="">
-              <p class="">일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
+            <li class="list_item06" data-aos="fade-up" data-aos-delay="1000">
+              <p>일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
             </li>
-            <li class="">
-              <p class="">일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
+            <li class="list_item07" data-aos="fade-up" data-aos-delay="1200">
+              <p>일이삼<b>사오육칠팔구십</b>일이삼사오육</p>
             </li>
           </ul>
         </div>
       </div>
 
-      <div  id="contactUs" class="section"></div>
+      <div id="member" class="section anc">
+        <div class="section_inner basicCont">
+          <div class="text_box">
+            <h3 class="section_title dot" data-aos="fade-up">일이삼사오육</h3>
+            <p class="section_sub-title" data-aos="fade-up">일이삼사오육칠팔구십일이삼사오육칠팔구십<br>일이삼사오육칠팔구십</p>
+          </div>
+          <div class="swiper-container profile_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="profile">
+                  <div class="profile_img"></div>
+                  <p class="profile_team">일이삼사오육칠</p>
+                  <p class="profile_name">일이삼사오육칠팔</p>
+                  <p class="profile_rank">일이삼</p>
+                </div>
+                <div class="profile_social">
+                  <a href="#kko"></a>
+                  <a href="#face"></a>
+                  <a href="#insta"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile">
+                  <div class="profile_img"></div>
+                  <p class="profile_team">일이삼사오육칠</p>
+                  <p class="profile_name">일이삼사오육칠팔</p>
+                  <p class="profile_rank">일이삼</p>
+                </div>
+                <div class="profile_social">
+                  <a href="#kko"></a>
+                  <a href="#face"></a>
+                  <a href="#insta"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile">
+                  <div class="profile_img"></div>
+                  <p class="profile_team">일이삼사오육칠</p>
+                  <p class="profile_name">일이삼사오육칠팔</p>
+                  <p class="profile_rank">일이삼</p>
+                </div>
+                <div class="profile_social">
+                  <a href="#kko"></a>
+                  <a href="#face"></a>
+                  <a href="#insta"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile">
+                  <div class="profile_img"></div>
+                  <p class="profile_team">일이삼사오육칠</p>
+                  <p class="profile_name">일이삼사오육칠팔</p>
+                  <p class="profile_rank">일이삼</p>
+                </div>
+                <div class="profile_social">
+                  <a href="#kko"></a>
+                  <a href="#face"></a>
+                  <a href="#insta"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile">
+                  <div class="profile_img"></div>
+                  <p class="profile_team">일이삼사오육칠</p>
+                  <p class="profile_name">일이삼사오육칠팔</p>
+                  <p class="profile_rank">일이삼</p>
+                </div>
+                <div class="profile_social">
+                  <a href="#kko"></a>
+                  <a href="#face"></a>
+                  <a href="#insta"></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile">
+                  <div class="profile_img"></div>
+                  <p class="profile_team">일이삼사오육칠</p>
+                  <p class="profile_name">일이삼사오육칠팔</p>
+                  <p class="profile_rank">일이삼</p>
+                </div>
+                <div class="profile_social">
+                  <a href="#kko"></a>
+                  <a href="#face"></a>
+                  <a href="#insta"></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contactUs" class="section anc">
+        <div class="section_inner basicCont">
+          <div class="text_box">
+            <h3 class="section_title dot" data-aos="fade-up">일이삼사오육</h3>
+            <p class="section_sub-title" data-aos="fade-up">일이삼사오육칠팔구십일이삼사오육칠팔구십<br>일이삼사오육칠팔구십</p>
+            <p class="section_desc"></p>
+          </div>
+
+          <div id="map" style="width:100%; height:400px;"></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section_inner basicCont">
+          <div class="qa_list">
+            <div class="list_item">
+              <div class="item_head">
+                <a href="#"></a>
+              </div>
+              <div class="item_body"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="banner_inner">
+
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+
     </div>
   </div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="./js/main.js"></script>
+  <script>
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(33.450701, 126.570667),
+      level: 3
+    };
+
+    var map = new kakao.maps.Map(container, options);
+  </script>
 </body>
 
 </html>

@@ -1,67 +1,3 @@
-/* font - NotoSansKR */
-@font-face {
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(../fonts/NotoSansKR-Thin.woff2) format("woff2");
-  src: url(../fonts/NotoSansKR-Thin.woff) format("woff");
-}
-
-@font-face {
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url(../fonts/NotoSansKR-Light.woff2) format("woff2");
-  src: url(../fonts/NotoSansKR-Light.woff) format("woff");
-}
-
-@font-face {
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(../fonts/NotoSansKR-DemiLight.woff2) format("woff2");
-  src: url(../fonts/NotoSansKR-DemiLight.woff) format("woff");
-}
-
-@font-face {
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 350;
-  font-display: swap;
-  src: url(../fonts/NotoSansKR-Regular.woff2) format("woff2");
-  src: url(../fonts/NotoSansKR-Regular.woff) format("woff");
-}
-
-@font-face {
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 450;
-  font-display: swap;
-  src: url(../fonts/NotoSansKR-Medium.woff2) format("woff2");
-  src: url(../fonts/NotoSansKR-Medium.woff) format("woff");
-}
-
-@font-face {
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 550;
-  font-display: swap;
-  src: url(../fonts/NotoSansKR-Bold.woff2) format("woff2");
-  src: url(../fonts/NotoSansKR-Bold.woff) format("woff");
-}
-
-@font-face {
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(../fonts/NotoSansKR-Black.woff2) format("woff2");
-  src: url(../fonts/NotoSansKR-Black.woff) format("woff");
-}
-
 /* 웹접근성을 위한 텍스트 숨김 처리 */
 .blind {
   display: block;
@@ -165,7 +101,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: "NotoSansKR", sans-serif;
   vertical-align: baseline;
 }
 
@@ -183,6 +118,7 @@ section {
   display: block;
 }
 body {
+  font-family: "Noto Sans KR", sans-serif;
   line-height: 1;
 }
 
