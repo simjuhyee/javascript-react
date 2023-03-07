@@ -1,11 +1,11 @@
 $(document).ready(function () {
   prevent_a();
-  mOpen();
-  mClose()
+  menu_open();
+  menu_close()
+  accordion()
 });
 
-
-
+// 상단 앵커 event
 function prevent_a() {
   $(document).on("click", 'a[href^="#"]', function (e) {
     var target = this.hash;
@@ -27,7 +27,7 @@ function prevent_a() {
     e.preventDefault();
     return false;
   });
-
+  // anc add class on
   $(window).on('scroll', function(){
     for(let i = 0; i < 4; i++){
       var menu_h = document.querySelector("#header").clientHeight
@@ -39,41 +39,28 @@ function prevent_a() {
 
      var pos = $(this).scrollTop();
      if (pos > 0) {
-       headerFixed();
+        $("#header").addClass("fixed");
+        return false;
      } else {
-       headerTop();
+        $("#header").removeClass("fixed");
      }
   })
 }
 
-
-function mOpen() {
-  $(".sitemap").on("click", function () {
-    $("#menuArea").addClass("on");
-    $(".menuList").animate({right: "0"})
+// mo version menu event
+function menu_open() {
+  $(".sitemap_btn").on("click", function () {
+    $("#mo_gnb").addClass("on");
+    $(".mo_menu").animate({right: "0"})
+  });
+}
+function menu_close() {
+  $(".close_btn").on("click", function () {
+    $("#mo_gnb").removeClass("on");
+    $(".mo_menu").animate({right: "-100%"})
   });
 }
 
-function mClose() {
-  $(".btnMenu_mClose").on("click", function () {
-    $("#menuArea").removeClass("on");
-    $(".menuList").animate({right: "-100%"})
-  });
-}
-
-
-function headerFixed() {
-  var header = $("#header");
-  $(header).addClass("fixed");
-  return false;
-}
-
-function headerTop() {
-  var header = $("#header");
-  $(header).removeClass("fixed");
-  return false;
-}
-// Header Fixed
 
 var visual_swiper = new Swiper(".visual_swiper", {
   autoplay: {
@@ -103,7 +90,6 @@ var visual_swiper = new Swiper(".visual_swiper", {
     },
   },
 });
-
 
 var main_swiper = new Swiper(".main_swiper", {
   autoplay: {
@@ -136,35 +122,45 @@ var main_swiper = new Swiper(".main_swiper", {
 
 
 var ww = $(window).width();
+var mSwiper = undefined;
 function initSwiper() {
-  var profile_swiper = new Swiper(".profile_swiper", {
-    slidesPerView: 1.5,
-    spaceBetween: 30,
-    loop: true,
-    centeredSlides: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+  if (ww < 980 && mSwiper == undefined) {
+    mSwiper =  new Swiper(".profile_swiper", {
+          slidesPerView: 1.5,
+          spaceBetween: 30,
+          loop: true,
+          centeredSlides: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+  } else if (ww >= 980 && mSwiper != undefined) {
+    mSwiper.destroy();
+    mSwiper = undefined;
+  }
 }
-if (ww < 980) {
-  initSwiper();
-} else if (ww >= 980) {
-  // swiper 실행 안함
-}
-
+initSwiper();
 $(window).on('resize', function () {
   ww = $(window).width();
-  if (ww < 980) {
-    initSwiper();
-  }
+  initSwiper();
 });
 
-
+//aos script
 AOS.init({
   duration: 1300,
 });
 
-
-
+//faq accordion event
+function accordion(){
+  $(".item_head").on('click', function(e){
+    $(this).toggleClass('on')
+    var itemBody = $(this).next();
+    if($(this).hasClass('on')){
+      itemBody.addClass('on')
+    }else {
+      itemBody.removeClass('on')
+    }
+    e.preventDefault();
+  })
+}
