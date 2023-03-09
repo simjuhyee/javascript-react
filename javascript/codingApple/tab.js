@@ -32,22 +32,23 @@
 //   $(this).addClass('show')
 //   $(this).siblings().removeClass('orange')
 //   $(this).siblings().removeClass('show')
-// })
-let tabBtn = $('.tab-button')
-let tabContent = $('.tab-content')
-for(let i = 0;  i < tabBtn.length; i++){
-  tabBtn[i].addEventListener('click', function(){
-    tabBtn[i].classList.add('orange')
-    tabContent[i].classList.add('show')
-    // 기존 class 제거
-    document.querySelector(".list").childNodes.classList.remove('orange')
-    document.querySelector(".container").childNodes.classList.remove('show')
-    document.querySelector(".list").childNodes.classList.remove('orange')
-    document.querySelector(".container").childNodes.classList.remove('show')
-  })
+// // })
+// let tabBtn = $('.tab-button')
+// let tabContent = $('.tab-content')
+// for(let i = 0;  i < tabBtn.length; i++){
+//   $('.tab-button').eq(i).on('click', function(){
+//     tab(i)
+//   })
+// }
+
+function tab(n){
+  $('.tab-button').removeClass('orange')
+  $('.tab-button').eq(n).addClass('orange')
+  $('.tab-content').removeClass('show')
+  $('.tab-content').eq(n).addClass('show')
 }
 
+$('.list').click(function(e){
+   tab(e.target.dataset.id)
 
-function tab(){
-
-}
+})
