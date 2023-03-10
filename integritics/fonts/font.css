@@ -33,7 +33,7 @@
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   src: url(NotoSansKR-Bold.woff2) format("woff2"),
     url(NotoSansKR-Bold.woff) format("woff"),
     url(NotoSansKR-Bold.otf) format("opentype");
