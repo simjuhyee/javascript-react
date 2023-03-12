@@ -159,3 +159,100 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+
+
+#wrap {width:100%; min-width:320px; font-size: 18px;}
+.header_inner {width:1600px; margin:0 auto;}
+
+#header {transition:opacity 0.5s ease;}
+#header.scroll {opacity:1;}
+#header.fixed {position:fixed; animation:scroll 0.5s ease both;}
+#header.fixed.scroll { animation:scroll 0.5s ease both;background:#fff; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);}
+#header.fixed:not(.scroll) {animation:unscroll 0.5s ease both;}
+#header:not(.scroll):not(.fixed) {opacity:1;}
+#header {position: fixed;top:0;left:0;width:100%;z-index:1000; animation:scroll 0.5s ease both;}
+#header .header-inner {max-width:1260px;margin:0 auto;display:flex;}
+#header:not(.scroll):not(.fixed) {opacity:1;}
+#header.fixed #gnb .menu li a {color: #fff;}
+#header.fixed.scroll #gnb .menu li a {color: #000;}
+
+#header .header_inner {position:relative; padding:56.5px 0}
+#header .header_inner .logo a {display:inline-block; width:250px; height:18px; background: url(../img/logo_w.png); transition:all 0.4s ease;}
+#header.fixed.scroll .header_inner .logo a {background:url(../img/logo_b.png);}
+
+#header .header_inner a.sitemap_btn {display:none;}
+#header.fixed .header_inner a.sitemap_btn .hamburger,
+#header.fixed .header_inner a.sitemap_btn .hamburger::after,
+#header.fixed .header_inner a.sitemap_btn .hamburger::before {background-color: #fff;}
+#header .header_inner a.sitemap_btn .hamburger {display: inline-block; width: 20px; height: 2px; background-color: #000;}
+#header .header_inner a.sitemap_btn .hamburger::after,
+#header .header_inner a.sitemap_btn .hamburger::before {content: ''; position: absolute; top: 0; left: 0; width: 20px; height: 2px; background-color: #000;}
+#header .header_inner a.sitemap_btn .hamburger::after {top: auto; bottom: 0;}
+
+#mo_gnb .mo_menu .close_btn {top: 20px;}
+
+#gnb {position:absolute; right:0; top:54px; transition:all 0.4s ease;}
+#gnb .menu li {display:inline-block; margin-right:100px;}
+#gnb .menu li:last-child {margin-right:0;}
+#gnb .menu li a {position:relative; font-size: 24px; font-weight:600;line-height:1; color:#fff; display:block;  z-index:10; transition:all 0.4s ease;}
+
+
+/* 슬라이드 메뉴 : 모바일 메뉴 */
+.noScroll{overflow:hidden;}
+#mo_gnb {display:none; position:fixed; top:0; right:0; width:100%; overflow-x:hidden; z-index:9999999999; height:100%; max-width:100%;}
+#mo_gnb.on {display: block;}
+#mo_gnb .mo_menu {position:absolute; right:-100%; height:100%; width:calc(100% - 15vw);; background: #fff; box-sizing:border-box; overflow-y:auto; max-width:100%;}
+#mo_gnb .mo_menu h1 {position:relative; padding:40px 25px 30px; box-sizing:border-box; overflow:hidden;}
+#mo_gnb .mo_menu h1 img {height:60px;}
+
+#mo_gnb .mo_menu .close_btn {z-index:2; position:absolute; right:20px; top:20px; font-size:0; border:0; cursor:pointer;}
+#mo_gnb .mo_menu .close_btn .close {display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;}
+#mo_gnb .mo_menu .close_btn .close:before,
+#mo_gnb .mo_menu .close_btn .close:after {content:'';position: absolute;left: 50%;height: 20px;width: 2px;background-color: #000;}
+#mo_gnb .mo_menu .close_btn .close:before {transform: rotate(45deg);}
+#mo_gnb .mo_menu .close_btn .close:after {transform: rotate(-45deg);}
+
+#mo_gnb .mo_menu>.mo_list {background-color:#fff; width:100%;}
+#mo_gnb .mo_menu>.mo_list>li {background:#fff;}
+#mo_gnb .mo_menu>.mo_list>li>a {position:relative; padding:17px 25px; display:block; font-size:1.1rem; line-height:100%; color:#222; text-decoration:none !important; font-weight:500; letter-spacing:-0.5pt; z-index:10;}
+
+#mo_gnb .mo_menu>.mo_list .sMenu {background-color: #fff; position: relative; padding:0 30px 15px; display:none;}
+/* #mo_gnb .mo_menu>.mo_list .sMenu>li {} */
+#mo_gnb .mo_menu>.mo_list .sMenu>li>a {position:relative; display:block; padding:3px 0 3px 0; border:none; color:#777; font-size:14px;}
+#mo_gnb .mo_menu>.mo_list .sMenu>li>a:hover {color:#000; transition:all 0.2s linear; text-decoration:underline;}
+
+#mo_gnb .mo_menu>.mo_list .sMenu li:first-child a {padding-top:0}
+#mo_gnb .mo_menu>.mo_list .sMenu li:last-child a {padding-bottom:0}
+
+
+#grayLayer {width:100%; height:100%; background:rgba(0,0,0,0.9); position:fixed; left:0; top:0; z-index:99999; overflow-x:hidden;overflow-y:auto;display:none;}
+#grayLayer > a {display:block;width:100%;height:100%}
+/* 슬라이드 메뉴 : 모바일 메뉴 */
+
+
+
+
+/* section banner */
+.section_banner {position:relative; background-color: #3170E2;}
+.section_banner::after {content: ''; position:absolute; top: 0; right:0; width: 768px; height:400px; background:url(../img/section07_bg.png) no-repeat center; background-size:cover; }
+.section_banner .section_inner {width: 1542px; margin: 0 auto; padding: 90px 0 100px;}
+.section_banner .section_inner .banner_text {font-size: 44px;font-weight: 500;line-height: 50px;color: #fff;}
+.section_banner .section_inner .banner_btn {display:inline-block; padding: 18px 40px; margin-top: 51px;background-color: #000;border-radius: 50px;text-align: center;font-size: 14px;font-weight:600; color: #fff;}
+
+/* section banner */
+
+/* footer */
+#footer {background-color: #191F28;}
+#footer .footer_inner {width: 1542px; margin: 0 auto; padding: 120px 0 155px;}
+#footer .footer_inner .privacy_btn {display: inline-block; margin-top: 67px; color: #fff; font-weight: bold; text-decoration: underline;}
+#footer .footer_inner .footer_info {margin-top: 25px; color: rgba(255, 255, 255, 0.7); font-size: 16px;}
+#footer .footer_inner .footer_info ul {display: flex; margin-top: 16px;}
+#footer .footer_inner .footer_info ul li {position: relative; padding: 0 16px; border-left: 1px solid rgba(255, 255, 255, 0.3);}
+#footer .footer_inner .footer_info ul li:first-child {padding-left: 0; border-left: 0;}
+#footer .footer_inner .footer_info ul li a {color: #babbbe;}
+#footer .footer_inner .footer_info .copyright {margin-top: 18px;}
+
+
+.floating_btn a {z-index: 90;position: fixed;bottom: 50px;right: 50px;width: 70px;height: 70px;border-radius: 50%;font-size: 12px;text-align: center;line-height: 70px;color: #fff;font-weight: 500;background-color: #191F28;}
+/* footer */
