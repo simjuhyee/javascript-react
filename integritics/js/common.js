@@ -1,7 +1,7 @@
 $(document).ready(function () {
     menu_open();
     menu_close()
-  
+    prevent_a()
   });
   
   // mo version menu event

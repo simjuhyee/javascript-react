@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <!-- meta, title, link, script, style 순으로 정렬 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/information.css">
+    <link rel="stylesheet" href="./fonts/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2a4fb7723234cf9cd4227306526ff667"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <title>INTEGRITICS</title>
+</head>
+
+<body>
+    <div id="wrap">
+
+        <header id="header">
+            <div class="header_inner common_inner">
+                <h1 class="logo"><a href="http://www.integritics.io"><span class="blind">INTEGRITICS</span></a></h1>
+
+                <div id="gnb">
+                    <ul class="menu">
+                        <li><a href="./aboutUs.html">회사소개</a></li>
+                        <li><a href="./technology.html">제품소개</a></li>
+                        <li><a href="./information.html">요금안내</a></li>
+                        <li><a href="./contactUs.html">문의하기</a></li>
+                    </ul>
+                </div>
+                <a class="sitemap_btn"><span class="hamburger"></span></a>
+            </div>
+        </header>
+
+        <div id="mo_gnb">
+            <div class="mo_menu">
+                <h1 class="mo_logo"><a href="/"></a></h1>
+                <a class="close_btn"><span class="close"></span></a>
+                <ul class="mo_list">
+                    <li><a href="#aboutUs">회사소개</a></li>
+                    <li><a href="#technology">기능소개</a></li>
+                    <li><a href="#member">구성팀원</a></li>
+                    <li><a href="#contactUs">문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <main id="content">
+            <div class="top_title">
+                <h3>요금안내</h3>
+            </div>
+            
+
+            <div class="section sec01">
+                <div class="section_inner">
+                    <ul class="price_list">
+                        <li class="price_item">
+                            <div class="item_head">
+                                <p class="item_title"><strong>Free</strong></p>
+                                <p class="item_desc">소규모 프로젝트로 일하는 신생 스타트업 및 개별 
+                                    팀에게 추천합니다.</p>
+                                <p class="item_price"><strong>4,500,000</strong>원</p>
+                                <a href="#" class="item_btn">인테그리틱스 만들기</a>
+                            </div>
+                            <div class="item_body">
+                                <ul class="option_list">
+                                    <li>프로젝트 최대 5개</li>
+                                    <li>업무 최대 300개</li>
+                                    <li>최근 10,000건</li>
+                                    <li>외부 앱 최대 5개 연동 지원</li>
+                                    <li>워크스페이스당 5GB 저장 공간</li>
+                                    <li>25MB</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="price_item">
+                            <div class="item_head">
+                                <p class="item_title"><strong>Standard</strong></p>
+                                <p class="item_desc">프로젝트 중심으로 일하는 작은 규모의 기업 및
+                                    개별 부서에 추천합니다.</p>
+                                <p class="item_price"><strong>4,500,000</strong>원</p>
+                                <a href="#" class="item_btn">무료 체험하기</a>
+                            </div>
+                            <div class="item_body">
+                                <ul class="option_list">
+                                    <li>계정관리</li>
+                                    <li>계정활동 내역</li>
+                                    <li>자동 CFU 측정</li>
+                                    <li>분석 데이터 리뷰</li>
+                                    <li>데이터 백업관리</li>
+                                    <li>계정 및 팀관리</li>
+                                    <li>내부 양식 추가</li>
+                                    <li>자동 분석 레포트</li>
+                                    <li>레포트 전자결재</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="price_item">
+                            <div class="item_head">
+                                <p class="item_title"><strong>Advanced</strong></p>
+                                <p class="item_desc">부서 간 협업을 필요로 하는 중소 기업 및 중견
+                                    기업에 추천 합니다.</p>
+                                <p class="item_notice">Advanced 플랜의 요금제에 관한 자세한 내용은
+                                    영업팀에 문의 하세요.</p>
+                                <a href="#" class="item_btn type02">영업팀에 문의하기</a>
+                            </div>
+                            <div class="item_body">
+                                <p class="item_notice">(Standard 플랜의 모든 기능을 포함)</p>
+                                <ul class="option_list">
+                                    <li>계정 및 팀관리</li>
+                                    <li>내부 양식 추가</li>
+                                    <li>자동 분석 레포트</li>
+                                    <li>레포트 전자결재</li>
+                                    <li>추가 양식 제공(5건)</li>
+                                    <li>사용자당 20GB 저장 공간</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="price_item">
+                            <div class="item_head">
+                                <p class="item_title"><strong>Enterprise</strong></p>
+                                <p class="item_desc">부서 간 협업, 전사적 프로젝트, 보안과 관리 및 확장성 
+                                    필요한 중견 기업 및 대기업에 추천 합니다.</p>
+                                <p class="item_notice">Enterprise 플랜의 요금제에 관한 자세한 내용은 
+                                    영업팀에 문의하세요.</p>
+                                <a href="#" class="item_btn type02">영업팀에 문의하기</a>
+                            </div>
+                            <div class="item_body">
+                                <p class="item_notice">(Standard 플랜의 모든 기능을 포함)</p>
+                                <ul class="option_list">
+                                    <li>계정 및 팀관리</li>
+                                    <li>내부 양식 추가</li>
+                                    <li>자동 분석 레포트</li>
+                                    <li>레포트 전자결재</li>
+                                    <li>추가 양식 제공(5건)</li>
+                                    <li>사용자당 20GB 저장 공간</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <section class="section section_banner">
+            <div class="section_inner common_inner">
+                <p class="banner_text">아직도 망설여지나요?<br>
+                    우리의 서비스 체험은 무료 입니다.</p>
+                <a href="#무료체험하기" class="banner_btn">도입하기</a>
+            </div>
+        </section>
+        </main>
+
+        <footer id="footer">
+            <div class="footer_inner common_inner">
+                <h1 class="logo"><a href="#"><img src="../integritics/img/footer_logo.png" alt=""></a></h1>
+                <a href="#개인정보처리방침" class="privacy_btn">개인정보처리방침</a>
+                <div class="footer_info">
+                    <ul>
+                        <li>주식회사 인테그리틱스</li>
+                        <li>사업자등록번호 : 763-87-02487</li>
+                    </ul>
+                    <ul>
+                        <li>서울 연구실 : 서울특별시 관악구 봉천로62길 5, 5층</li>
+                        <li><a href="">대표이사 : 박 병진</a></li>
+                        <li><a href="">대표표번호 : 031-758-2872</a></li>
+                        <li><a href="">E-mail : bjpark21@integritics.io</a></li>
+                    </ul>
+                    <ul>
+                        <li>본점 : 경기도 성남시 수정구 달래내로46 글로벌융합센터 A동 202호</li>
+                    </ul>
+                    <p class="copyright">&copy;COPYRIGHT 2023. INTEGRITICS, INC, All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="floating_btn">
+            <a href="#">도입하기</a>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="./js/common.js"></script>
+        <!-- <script>
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(33.450701, 126.570667),
+      level: 3
+    };
+
+    var map = new kakao.maps.Map(container, options);
+  </script> -->
+</body>
+
+</html>

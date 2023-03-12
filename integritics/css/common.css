@@ -256,3 +256,13 @@ table {
 
 .floating_btn a {z-index: 90;position: fixed;bottom: 50px;right: 50px;width: 70px;height: 70px;border-radius: 50%;font-size: 12px;text-align: center;line-height: 70px;color: #fff;font-weight: 500;background-color: #191F28;}
 /* footer */
+
+
+@keyframes scroll {
+	0% {transform:translateY(-100%)}
+	100% {transform:translateY(0)}
+}
+@keyframes unscroll {
+	0% {transform:translateY(0)}
+	100% {transform:translateY(-100%)}
+}

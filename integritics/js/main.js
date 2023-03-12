@@ -1,6 +1,6 @@
 $(document).ready(function () {
   prevent_a();
-  accordion()
+  accordion();
 });
 
 var visual_swiper = new Swiper(".visual_swiper", {
@@ -64,6 +64,21 @@ var product_swiper03 = new Swiper(".product_swiper03", {
 });
 
 function prevent_a() {
+  var header = $('#header')
+  $(window).bind('mousewheel DOMMouseScroll', function (event) {
+    let scroll = $(window).scrollTop();
+    if (scroll > 0) {
+      header.addClass('fixed')
+      if (event.originalEvent.wheelDelta >= 0) {
+        header.addClass('scroll')
+      } else {
+        header.removeClass('scroll')
+      }
+    } else {
+      header.removeClass('scroll')
+      header.removeClass('fixed')
+    }
+  });
   $(window).bind('mousewheel DOMMouseScroll', function () {
     if ($('.product_swiper01 .swiper-slide04').hasClass('swiper-slide-active')) {
       $('html').animate({ scrollTop: $('.product02_sec').offset().top }, 400);
