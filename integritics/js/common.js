@@ -1,28 +1,40 @@
 $(document).ready(function () {
-    menu_open();
-    menu_close()
+    modal();
+    menu();
     prevent_a()
   });
-  
+
   // mo version menu event
-  function menu_open() {
+  function menu() {
     $(".sitemap_btn").on("click", function () {
       $("#mo_gnb").addClass("on");
       $(".mo_menu").animate({ right: "0" })
+      $(".close_btn").on("click", function () {
+        $("#mo_gnb").removeClass("on");
+        $(".mo_menu").animate({ right: "-100%" })
+      });
     });
   }
-  function menu_close() {
-    $(".close_btn").on("click", function () {
-      $("#mo_gnb").removeClass("on");
-      $(".mo_menu").animate({ right: "-100%" })
+
+
+  function modal() {
+    $("a.contact").on("click", function (e) {
+      $(".contact_modal").addClass('show')
+      e.preventDefault();
     });
+    $('.contact_modal').on('click', function(e){
+      if(e.target.className == 'filter' || e.target.className == 'modal_btn'){
+        $(".contact_modal").removeClass('show')
+      }
+    })
+
   }
-  
-  
+
+
 
 function prevent_a() {
     var header = $('#header')
-    $(window).bind('mousewheel DOMMouseScroll', function (event) {
+    $(window).bind('wheel DOMMouseScroll', function (event) {
       let scroll = $(window).scrollTop();
       if (scroll > 0) {
         header.addClass('fixed')
@@ -43,4 +55,3 @@ function prevent_a() {
 AOS.init({
     duration: 1300,
   });
-  

@@ -1,44 +1,197 @@
-.section {position: relative; overflow:hidden;}
-.section .text_box .title {position: relative; display: inline-block; font-size: 52px;line-height: 66px;  font-weight: 600;}
-.section .text_box .title::after {content: ''; position: absolute; bottom: 36px; right: -35px; width: 20px; height: 20px; border-radius: 50%; background-color: #ff505a;}
-.section .text_box .sub-title {font-size: 30px;font-weight: 600; color: #6b7684; line-height: 51px;}
-.section .text_box .desc { font-size: 22px; line-height: 36px; color: #191F28;}
+.section {
+  position: relative;
+  overflow: hidden;
+}
 
-.top_title { display: flex; flex-direction: column; justify-content: center;align-items: center;width: 100%;height: 26.25rem;-webkit-background-size: cover;background-size: cover;background: url(../img/technology/title_bg.png) no-repeat center;}
-.top_title h3 {font-size: 90px;font-weight: 600;color: #fff;}
-.top_title .sub_list {display: flex;}
-.top_title .sub_list li {position: relative; margin-top: 43px; padding-right: 80px;}
-.top_title .sub_list li:last-child {padding-right: 0;}
-.top_title .sub_list li::after {content: ''; position: absolute; right: 40px; top: 2px; width: 1px;height: 15px;background-color: rgba(255, 255, 255, 0.3);}
-.top_title .sub_list li:last-child::after{display: none;}
-.top_title .sub_list li a {font-size: 16px; line-height: 1; color: rgba(255, 255, 255, 0.3);; font-weight: 600;}
-.top_title .sub_list li a.on {color: #fff;}
+.section .text_box .title {
+  position: relative;
+  display: inline-block;
+  font-size: 52px;
+  line-height: 66px;
+  font-weight: 600;
+}
 
-.section .section_inner {display: flex;}
-.section .section_inner .img_area {width: 50%; padding: 70px 0;}
-.section .section_inner .img_area {display: flex; justify-content: center; align-items: center; background-color: #3170E2;}
-.section .section_inner .text_area {width: 50%; padding: 150px 0 150px 147px;}
-.section .section_inner .text_area .sub-title {margin-top: 103px;}
-.section .section_inner .text_area .desc {margin-top: 34px;}
+.section .text_box .title::after {
+  content: '';
+  position: absolute;
+  bottom: 36px;
+  right: -35px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff505a;
+}
 
-.sec01 {background-size: cover;background: url(../img/technology/tab01_sec01_bg.png) no-repeat center;}
-.sec01 .section_inner {width: 1628px; margin: 0 auto;padding: 200px 0 455px;}
-.sec01 .text_box .desc {margin-top: 73px;}
+.section .text_box .sub-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #6b7684;
+  line-height: 51px;
+}
+
+.section .text_box .desc {
+  font-size: 22px;
+  line-height: 36px;
+  color: #191F28;
+}
+
+.top_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 26.25rem;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  background: url(../img/technology/title_bg.png) no-repeat center;
+}
+
+.top_title h3 {
+  font-size: 90px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.top_title .sub_list {
+  display: flex;
+}
+
+.top_title .sub_list li {
+  position: relative;
+  margin-top: 43px;
+  padding-right: 80px;
+}
+
+.top_title .sub_list li:last-child {
+  padding-right: 0;
+}
+
+.top_title .sub_list li::after {
+  content: '';
+  position: absolute;
+  right: 40px;
+  top: 2px;
+  width: 1px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.top_title .sub_list li:last-child::after {
+  display: none;
+}
+
+.top_title .sub_list li a {
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.3);
+  ;
+  font-weight: 600;
+}
+
+.top_title .sub_list li a.on {
+  color: #fff;
+}
+
+.section .section_inner {
+  display: flex;
+}
+
+.section .section_inner .img_area {
+  width: 50%;
+  padding: 70px 0;
+}
+
+.section .section_inner .img_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3170E2;
+}
+
+.section .section_inner .text_area {
+  width: 50%;
+  padding: 150px 0 150px 147px;
+}
+
+.section .section_inner .text_area .sub-title {
+  margin-top: 103px;
+}
+
+.section .section_inner .text_area .desc {
+  margin-top: 34px;
+}
+
+.sec01 {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec01_bg.png) no-repeat center;
+}
+
+.sec01 .section_inner {
+  width: 1628px;
+  margin: 0 auto;
+  padding: 200px 0 455px;
+}
+
+.sec01 .text_box .desc {
+  margin-top: 73px;
+}
 
 
-.sec03 .section_inner .img_area {background-color: #E7AD18;}
-.sec04 .section_inner .img_area {background-size: cover;background: url(../img/technology/tab01_sec04_bg.png) no-repeat center}
-.sec05 .section_inner .img_area {background-size: cover;background: url(../img/technology/tab01_sec05_bg.png) no-repeat center}
+.sec03 .section_inner .img_area {
+  background-color: #E7AD18;
+}
 
-.sec06 {background-size: cover;background: url(../img/technology/tab01_sec06_bg.png) no-repeat center;}
-.sec06 .section_inner {width: 1628px; margin: 0 auto;padding: 200px 0 440px;}
-.sec06 .text_box .desc {margin-top: 73px;}
+.sec04 .section_inner .img_area {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec04_bg.png) no-repeat center
+}
 
-.sec07 .img_area {background-size: cover;background: url(../img/technology/tab01_sec07_bg.png) no-repeat center;}
-.sec08 .section_inner .img_area {background-color: #E7AD18 ;}
+.sec05 .section_inner .img_area {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec05_bg.png) no-repeat center
+}
 
-.sec09 {background-size: cover;background: url(../img/technology/tab01_sec09_bg.png) no-repeat center;}
-.sec09 .section_inner {width: 1628px; margin: 0 auto;padding: 200px 0 409px;}
-.sec09 .text_box .desc {margin-top: 73px;}
+.sec06 {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec06_bg.png) no-repeat center;
+}
 
-.sec11 .section_inner .img_area {background-size: cover;background: url(../img/technology/tab01_sec11_bg.png) no-repeat center;}
+.sec06 .section_inner {
+  width: 1628px;
+  margin: 0 auto;
+  padding: 200px 0 440px;
+}
+
+.sec06 .text_box .desc {
+  margin-top: 73px;
+}
+
+.sec07 .img_area {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec07_bg.png) no-repeat center;
+}
+
+.sec08 .section_inner .img_area {
+  background-color: #E7AD18;
+}
+
+.sec09 {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec09_bg.png) no-repeat center;
+}
+
+.sec09 .section_inner {
+  width: 1628px;
+  margin: 0 auto;
+  padding: 200px 0 409px;
+}
+
+.sec09 .text_box .desc {
+  margin-top: 73px;
+}
+
+.sec11 .section_inner .img_area {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec11_bg.png) no-repeat center;
+}
