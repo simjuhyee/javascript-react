@@ -37,6 +37,7 @@ var product_swiper = new Swiper(".product_swiper01", {
   slidesPerView: 1,
   spaceBetween: 30,
   mousewheel: true,
+  allowTouchMove: true,
   scrollbar: {
     el: ".product_swiper01 .swiper-scrollbar",
     hide: false,
@@ -57,7 +58,8 @@ var product_swiper = new Swiper(".product_swiper01", {
           setTimeout(function () {
           $(".product_swiper01 .swiper-slide03").bind('wheel DOMMouseScroll', function (event) {
             if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
-              $('html').animate({ scrollTop: $('.product02_sec').offset().top }, 400);
+              $('html').stop().animate({ scrollTop: $('.product02_sec').offset().top }, 400);
+              product_swiper.slideTo(0, 400, false)
             }
           });
         }, 100);
@@ -75,6 +77,7 @@ var product_swiper02 = new Swiper(".product_swiper02", {
   slidesPerView: 1,
   spaceBetween: 30,
   mousewheel: true,
+  allowTouchMove: false,
   scrollbar: {
     el: ".product_swiper02 .swiper-scrollbar",
     hide: false,
@@ -95,7 +98,8 @@ var product_swiper02 = new Swiper(".product_swiper02", {
           setTimeout(function () {
           $(".product_swiper02 .swiper-slide02").bind('wheel DOMMouseScroll', function (event) {
             if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
-              $('html').animate({ scrollTop: $('.product03_sec').offset().top }, 400);
+              $('html').stop().animate({ scrollTop: $('.product03_sec').offset().top }, 400);
+              product_swiper02.slideTo(0, 400, false)
             }
           });
         }, 100);
@@ -113,6 +117,7 @@ var product_swiper03 = new Swiper(".product_swiper03", {
   slidesPerView: 1,
   spaceBetween: 30,
   mousewheel: true,
+  allowTouchMove: false,
   scrollbar: {
     el: ".product_swiper03 .swiper-scrollbar",
     hide: false,
@@ -133,7 +138,8 @@ var product_swiper03 = new Swiper(".product_swiper03", {
           setTimeout(function () {
           $(".product_swiper03 .swiper-slide02").bind('wheel DOMMouseScroll', function (event) {
             if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
-              $('html').animate({ scrollTop: $('.partner_sec').offset().top }, 400);
+              $('html').stop().animate({ scrollTop: $('.partner_sec').offset().top }, 400);
+              product_swiper03.slideTo(0, 400, false)
             }
           });
         }, 100);
@@ -146,46 +152,27 @@ var product_swiper03 = new Swiper(".product_swiper03", {
       }
   }
 });
-var menu_h = document.querySelector("#header").clientHeight
-$(".product_swiper01 .swiper-slide01.swiper-slide-active").bind('wheel DOMMouseScroll', function (event) {
-  if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
-    $('html').animate({ scrollTop: $('.section_visual').offset().top - menu_h}, 400);
-  }
-});
-$(".product_swiper02 .swiper-slide01.swiper-slide-active").bind('wheel DOMMouseScroll', function (event) {
-  if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
-    $('html').animate({ scrollTop: $('.product_swiper01').offset().top - menu_h}, 400);
-  }
-});
-$(".product_swiper03 .swiper-slide01.swiper-slide-active").bind('wheel DOMMouseScroll', function (event) {
-  if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
-    $('html').animate({ scrollTop: $('.product_swiper02').offset().top - menu_h }, 400);
-  }
-});
+// var menu_h = document.querySelector("#header").clientHeight
 
-
-
-function prevent_a() {
-  var header = $('#header')
-  $(window).bind('wheel DOMMouseScroll', function (event) {
-    let scroll = $(window).scrollTop();
-    if (scroll > 0) {
-      header.addClass('fixed')
-      if (event.originalEvent.wheelDelta >= 0) {
-        header.addClass('scroll')
-      } else {
-        header.removeClass('scroll')
-      }
-    } else {
-      header.removeClass('scroll')
-      header.removeClass('fixed')
-    }
-  });
-}
+// $(".product_swiper01 .swiper-slide01.swiper-slide-active").bind('wheel DOMMouseScroll', function (event) {
+//   if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+//     $('html').stop().animate({ scrollTop: $('.section_visual').offset().top - menu_h}, 400);
+//   }
+// });
+// $(".product_swiper02 .swiper-slide01.swiper-slide-active").bind('wheel DOMMouseScroll', function (event) {
+//   if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+//     $('html').stop().animate({ scrollTop: $('.product_swiper01').offset().top - menu_h}, 400);
+//   }
+// });
+// $(".product_swiper03 .swiper-slide01.swiper-slide-active").bind('wheel DOMMouseScroll', function (event) {
+//   if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+//     $('html').stop().animate({ scrollTop: $('.product_swiper02').offset().top - menu_h }, 400);
+//   }
+// });
 
 $(".section_visual").on('wheel DOMMouseScroll', function (event) {
   if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
-    $('html').animate({ scrollTop: $('.product01_sec').offset().top }, 400);
+    $('html').stop().animate({ scrollTop: $('.product01_sec').offset().top }, 400);
     $('#header').addClass('fixed');
   }
 });
