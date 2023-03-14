@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <!-- meta, title, link, script, style 순으로 정렬 -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./fonts/font.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2a4fb7723234cf9cd4227306526ff667"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script></script>
+  <title>INTEGRITICS</title>
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100% !important;
+    }
+
+    .swiper-wrapper {
+      height: 100%;
+    }
+
+    .swiper-slide {
+      height: 100% !important;
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-v {
+      background: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div class="header_inner common_inner">
+        <h1 class="logo"><a href="./"><span class="blind">INTEGRITICS</span></a></h1>
+
+        <div id="gnb">
+          <ul class="menu">
+            <li><a href="./aboutUs.html">회사소개</a></li>
+            <li><a href="./technology.html">제품소개</a></li>
+            <li><a href="./information.html">요금안내</a></li>
+            <li><a href="./contactUs.html">문의하기</a></li>
+          </ul>
+        </div>
+        <a class="sitemap_btn"><span class="hamburger"></span></a>
+      </div>
+    </header>
+
+    <div id="mo_gnb">
+      <div class="mo_menu">
+        <h1 class="mo_logo"><a href="/"></a></h1>
+        <a class="close_btn"><span class="close"></span></a>
+        <ul class="mo_list">
+          <li><a href="#aboutUs">회사소개</a></li>
+          <li><a href="#technology">기능소개</a></li>
+          <li><a href="#member">구성팀원</a></li>
+          <li><a href="#contactUs">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="swiper swiper_wrap">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="swiper-slide ">Vertical Slide 1</div>
+        </div>
+        <div class="swiper-slide slide02">
+          <div class="swiper mySwiper2 swiper-v">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide_s01">Vertical Slide 1</div>
+              <div class="swiper-slide">Vertical Slide 2</div>
+              <div class="swiper-slide slide04">Vertical Slide 3</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="swiper-slide test01">
+          <div class="swiper mySwiper3 swiper-v">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide_11">Vertical Slide 01</div>
+              <div class="swiper-slide slide_12">Vertical Slide 02</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="swiper-slide test02">
+          <div class="swiper mySwiper4 swiper-v">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide_21">Vertical Slide 01</div>
+              <div class="swiper-slide slide_22">Vertical Slide 02</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="swiper-slide test03"></div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer_inner common_inner">
+        <h1 class="logo"><a href="#"><img src="../integritics/img/footer_logo.png" alt=""></a></h1>
+        <a href="#개인정보처리방침" class="privacy_btn">개인정보처리방침</a>
+        <div class="footer_info">
+          <ul>
+            <li>주식회사 인테그리틱스</li>
+            <li>사업자등록번호 : 763-87-02487</li>
+          </ul>
+          <ul>
+            <li>서울 연구실 : 서울특별시 관악구 봉천로62길 5, 5층</li>
+            <li><a href="">대표이사 : 박 병진</a></li>
+            <li><a href="">대표표번호 : 031-758-2872</a></li>
+            <li><a href="">E-mail : bjpark21@integritics.io</a></li>
+          </ul>
+          <ul>
+            <li>본점 : 경기도 성남시 수정구 달래내로46 글로벌융합센터 A동 202호</li>
+          </ul>
+          <p class="copyright">&copy;COPYRIGHT 2023. INTEGRITICS, INC, All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="floating_btn">
+      <a href="#" class="contact">도입하기</a>
+    </div>
+  </div>
+  <!-- 도입하기 모달 팝업 -->
+  <div class="contact_modal modal">
+    <div class="modal_wrap">
+      <div class="modal_contents">
+        <div class="modal_head">
+          <h3>Contact</h3>
+        </div>
+        <div class="modal_body">
+          <div class="modal_item">
+            <label class="item_label" for="input_name">Name</label>
+            <input type="text" name="" class="item_input" id="input_name">
+          </div>
+          <div class="modal_item">
+            <label class="item_label" for="input_company">Company</label>
+            <input type="text" name="" class="item_input" id="input_company">
+          </div>
+          <div class="modal_item">
+            <label class="item_label" for="input_email">E-mail</label>
+            <input type="text" name="" class="item_input" id="input_email">
+          </div>
+          <div class="modal_item">
+            <label class="item_label" for="input_phone">Phone</label>
+            <input type="text" name="" class="item_input" id="input_phone">
+          </div>
+          <div class="modal_item">
+            <label class="item_label" for="input_messege">Messege</label>
+            <textarea id="input_messege" class="item_input" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="modal_footer">
+          <a href="#" class="modal_btn">보내기</a>
+        </div>
+      </div>
+    </div>
+    <div class="filter"></div>
+  </div>
+  <!-- 도입하기 모달 팝업 -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    var swiper_wrap = new Swiper(".swiper_wrap", {
+      spaceBetween: 0,
+      direction: "vertical",
+      mousewheel: true,
+      allowTouchMove: false,
+      watchOverflow: true,
+      autoHeight: true,
+    });
+
+    var swiper2 = new Swiper(".mySwiper2", {
+      direction: "vertical",
+      mousewheel: true,
+      allowTouchMove: false,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    var swiper3 = new Swiper(".mySwiper3", {
+      direction: "vertical",
+      mousewheel: true,
+      allowTouchMove: false,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    var swiper4 = new Swiper(".mySwiper4", {
+      direction: "vertical",
+      mousewheel: true,
+      allowTouchMove: false,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+    $(window).bind('wheel DOMMouseScroll', function (event) {
+      if ($('.slide02, .test01, .test02').hasClass('swiper-slide-active')) {
+        swiper_wrap.mousewheel.disable()
+        $('.slide_s01, .slide_11, .slide_21').on('mousewheel DOMMouseScroll', function (e) {
+          if (e.originalEvent.wheelDelta > 0) {
+            swiper_wrap.mousewheel.enable()
+          } else {
+            swiper_wrap.mousewheel.disable()
+          }
+        })
+      }
+      if ($('.slide04, .slide_12, .slide_22').hasClass('swiper-slide-active')) {
+        swiper_wrap.mousewheel.enable()
+      }
+      if ($('.test01').hasClass('swiper-slide-active')) {
+        swiper_wrap.mousewheel.enable()
+        swiper2.slideTo(0, 0, false)
+      } else if ($('.test02').hasClass('swiper-slide-active')) {
+        swiper_wrap.mousewheel.enable()
+        swiper3.slideTo(0, 0, false)
+      } else if ($('.test03').hasClass('swiper-slide-active')) {
+        swiper_wrap.mousewheel.enable()
+        swiper4.slideTo(0, 0, false)
+      }
+    })
+
+
+
+  </script>
+</body>
+
+</html>

@@ -9,15 +9,17 @@
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./fonts/font.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
   <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2a4fb7723234cf9cd4227306526ff667"></script> -->
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script></script>
   <title>INTEGRITICS</title>
 </head>
 
 <body>
-  <div id="wrap">
+  <div id="wrap" class="pc_ver">
 
     <header id="header">
       <div class="header_inner common_inner">
@@ -98,7 +100,7 @@
           <div class="sec_list">
             <div class="swiper-container product_swiper product_swiper01">
               <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide01">
+                <div class="swiper-slide swiper-slide01 sec01_01">
                   <div class="slide_txt">
                     <h3>보안을 위한<br>사용자 관리 기능</h3>
                     <p>
@@ -108,7 +110,7 @@
                       있으며, 결재라인에 맞춰 시험결과를 공유할 수 있습니다.</p>
                   </div>
                 </div>
-                <div class="swiper-slide swiper-slide02">
+                <div class="swiper-slide swiper-slide02 sec01_02">
                   <div class="slide_txt">
                     <h3>외부감사를 위한<br>Audit Trail 기능</h3>
                     <p>Microbe Vestige의 사용자 관리는<br>
@@ -117,7 +119,7 @@
                       수 있는 기능을 제공합니다.</p>
                   </div>
                 </div>
-                <div class="swiper-slide swiper-slide03">
+                <div class="swiper-slide swiper-slide03 sec01_03">
                   <div class="slide_txt">
                     <h3>팀협업을 위한<br>전자문서시스템</h3>
                     <p>Microbe Vestige는 팀 내에서 작성된 보고서를 전송<br>
@@ -141,13 +143,13 @@
           <div class="sec_list">
             <div class="swiper-container product_swiper product_swiper02">
               <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide01">
+                <div class="swiper-slide swiper-slide01 sec02_01">
                   <div class="slide_txt">
                     <h3>프로젝트를 위한<br>
                       Data Management</h3>
                     <p>
                       정기적으로 진행되는 시험별 Data를 원하는 폴더로 미리<br>
-                      지정해서 저장할 수 있습니다.<br><br> 
+                      지정해서 저장할 수 있습니다.<br><br>
                       별도의 파일관리 없이 지정된 폴더에 한번에 정리하세요.<br>
                       저장된 폴더에서 원하는 데이터를 바로 찾아볼 수 있습니다.<br>
                       프로젝트별로 나눠진 폴더는 데이터가 섞이지 않게 권한이 <br>
@@ -155,7 +157,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="swiper-slide swiper-slide02">
+                <div class="swiper-slide swiper-slide02 sec02_02">
                   <div class="slide_txt">
                     <h3>외부감사를 위한<br>Audit Trail 기능</h3>
                     <p>Microbe Vestige의 사용자 관리는<br>
@@ -182,7 +184,7 @@
           <div class="sec_list">
             <div class="swiper-container product_swiper product_swiper03">
               <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide01">
+                <div class="swiper-slide swiper-slide01 sec03_01">
                   <div class="slide_txt">
                     <h3>너무 간편한<br>시험보고서 작성</h3>
                     <p>Data Drag and Drop기능으로 저장된 Data를 <br>
@@ -196,7 +198,7 @@
                       줄일 수 있습니다.</p>
                   </div>
                 </div>
-                <div class="swiper-slide swiper-slide02">
+                <div class="swiper-slide swiper-slide02 sec03_02">
                   <img src="./img/product03_item02.png" alt="" class="sec_item">
                   <div class="slide_txt">
                     <h3>사용자를 위한<br>
@@ -449,50 +451,50 @@
     <div class="floating_btn">
       <a href="#" class="contact">도입하기</a>
     </div>
-
-    <!-- 도입하기 모달 팝업 -->
-    <div class="contact_modal modal">
-      <div class="modal_wrap">
-        <div class="modal_contents">
-          <div class="modal_head">
-            <h3>Contact</h3>
+  </div>
+  <!-- 도입하기 모달 팝업 -->
+  <div class="contact_modal modal">
+    <div class="modal_wrap">
+      <div class="modal_contents">
+        <div class="modal_head">
+          <h3>Contact</h3>
+        </div>
+        <div class="modal_body">
+          <div class="modal_item">
+            <label class="item_label" for="input_name">Name</label>
+            <input type="text" name="" class="item_input" id="input_name">
           </div>
-          <div class="modal_body">
-            <div class="modal_item">
-              <label class="item_label" for="input_name">Name</label>
-              <input type="text" name="" class="item_input" id="input_name">
-            </div>
-            <div class="modal_item">
-              <label class="item_label" for="input_company">Company</label>
-              <input type="text" name="" class="item_input" id="input_company">
-            </div>
-            <div class="modal_item">
-              <label class="item_label" for="input_email">E-mail</label>
-              <input type="text" name="" class="item_input" id="input_email">
-            </div>
-            <div class="modal_item">
-              <label class="item_label" for="input_phone">Phone</label>
-              <input type="text" name="" class="item_input" id="input_phone">
-            </div>
-            <div class="modal_item">
-              <label class="item_label" for="input_messege">Messege</label>
-              <textarea id="input_messege" class="item_input" cols="30" rows="10"></textarea>
-            </div>
+          <div class="modal_item">
+            <label class="item_label" for="input_company">Company</label>
+            <input type="text" name="" class="item_input" id="input_company">
           </div>
-          <div class="modal_footer">
-            <a href="#" class="modal_btn">보내기</a>
+          <div class="modal_item">
+            <label class="item_label" for="input_email">E-mail</label>
+            <input type="text" name="" class="item_input" id="input_email">
+          </div>
+          <div class="modal_item">
+            <label class="item_label" for="input_phone">Phone</label>
+            <input type="text" name="" class="item_input" id="input_phone">
+          </div>
+          <div class="modal_item">
+            <label class="item_label" for="input_messege">Messege</label>
+            <textarea id="input_messege" class="item_input" cols="30" rows="10"></textarea>
           </div>
         </div>
+        <div class="modal_footer">
+          <a href="#" class="modal_btn">보내기</a>
+        </div>
       </div>
-      <div class="filter"></div>
     </div>
-    <!-- 도입하기 모달 팝업 -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.6/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/main.js"></script>
-    <!-- <script>
+    <div class="filter"></div>
+  </div>
+  <!-- 도입하기 모달 팝업 -->
+  <script type="text/javascript" src="./js/jquery.mousewheel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/main.js"></script>
+  <!-- <script>
     var container = document.getElementById('map');
     var options = {
       center: new kakao.maps.LatLng(33.450701, 126.570667),

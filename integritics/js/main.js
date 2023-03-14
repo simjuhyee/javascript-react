@@ -1,7 +1,10 @@
 $(document).ready(function () {
   prevent_a();
   accordion();
+  mousewheelE();
 });
+
+
 
 var visual_swiper = new Swiper(".visual_swiper", {
   autoplay: {
@@ -35,148 +38,123 @@ var visual_swiper = new Swiper(".visual_swiper", {
 var product_swiper = new Swiper(".product_swiper01", {
   direction: "vertical",
   slidesPerView: 1,
-  spaceBetween: 30,
-  mousewheel: true,
+  spaceBetween: 0,
   allowTouchMove: true,
+  watchOverflow : true,
+  mousewheel: true,
   scrollbar: {
     el: ".product_swiper01 .swiper-scrollbar",
     hide: false,
-  },
-  watchOverflow : true,
-  on: {
-      slideChange: function() {
-          setTimeout(function () {
-            product_swiper.params.touchReleaseOnEdges = false;
-            product_swiper.params.mousewheel.releaseOnEdges = false;
-          });
-      },
-      reachEnd: function() {
-          setTimeout(function () {
-            product_swiper.params.touchReleaseOnEdges = true;
-            product_swiper.params.mousewheel.releaseOnEdges = true;
-          }, 0);
-          setTimeout(function () {
-          $(".product_swiper01 .swiper-slide03").bind('wheel DOMMouseScroll', function (event) {
-            if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
-              $('html').stop().animate({ scrollTop: $('.product02_sec').offset().top }, 400);
-              product_swiper.slideTo(0, 400, false)
-            }
-          });
-        }, 100);
-      },
-      reachBeginning: function() {
-          setTimeout(function () {
-            product_swiper.params.touchReleaseOnEdges = true;
-            product_swiper.params.mousewheel.releaseOnEdges = true;
-          }, 500);
-      }
   }
 });
 var product_swiper02 = new Swiper(".product_swiper02", {
   direction: "vertical",
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 0,
   mousewheel: true,
-  allowTouchMove: false,
+  allowTouchMove: true,
+  watchOverflow : true,
   scrollbar: {
     el: ".product_swiper02 .swiper-scrollbar",
     hide: false,
   },
-  watchOverflow : true,
-  on: {
-      slideChange: function() {
-          setTimeout(function () {
-            product_swiper02.params.touchReleaseOnEdges = false;
-            product_swiper02.params.mousewheel.releaseOnEdges = false;
-          });
-      },
-      reachEnd: function() {
-          setTimeout(function () {
-            product_swiper02.params.touchReleaseOnEdges = true;
-            product_swiper02.params.mousewheel.releaseOnEdges = true;
-          }, 0);
-          setTimeout(function () {
-          $(".product_swiper02 .swiper-slide02").bind('wheel DOMMouseScroll', function (event) {
-            if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
-              $('html').stop().animate({ scrollTop: $('.product03_sec').offset().top }, 400);
-              product_swiper02.slideTo(0, 400, false)
-            }
-          });
-        }, 100);
-      },
-      reachBeginning: function() {
-          setTimeout(function () {
-            product_swiper02.params.touchReleaseOnEdges = true;
-            product_swiper02.params.mousewheel.releaseOnEdges = true;
-          }, 500);
-      }
-  }
 });
 var product_swiper03 = new Swiper(".product_swiper03", {
   direction: "vertical",
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 0,
   mousewheel: true,
-  allowTouchMove: false,
+  allowTouchMove: true,
+  watchOverflow : true,
   scrollbar: {
     el: ".product_swiper03 .swiper-scrollbar",
     hide: false,
   },
-  watchOverflow : true,
-  on: {
-      slideChange: function() {
-          setTimeout(function () {
-            product_swiper03.params.touchReleaseOnEdges = false;
-            product_swiper03.params.mousewheel.releaseOnEdges = false;
-          });
-      },
-      reachEnd: function() {
-          setTimeout(function () {
-            product_swiper03.params.touchReleaseOnEdges = true;
-            product_swiper03.params.mousewheel.releaseOnEdges = true;
-          },0 );
-          setTimeout(function () {
-          $(".product_swiper03 .swiper-slide02").bind('wheel DOMMouseScroll', function (event) {
-            if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
-              $('html').stop().animate({ scrollTop: $('.partner_sec').offset().top }, 400);
-              product_swiper03.slideTo(0, 400, false)
-            }
-          });
-        }, 100);
-      },
-      reachBeginning: function() {
-          setTimeout(function () {
-            product_swiper03.params.touchReleaseOnEdges = true;
-            product_swiper03.params.mousewheel.releaseOnEdges = true;
-          }, 500);
-      }
-  }
-});
-// var menu_h = document.querySelector("#header").clientHeight
-
-// $(".product_swiper01 .swiper-slide01.swiper-slide-active").bind('wheel DOMMouseScroll', function (event) {
-//   if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
-//     $('html').stop().animate({ scrollTop: $('.section_visual').offset().top - menu_h}, 400);
-//   }
-// });
-// $(".product_swiper02 .swiper-slide01.swiper-slide-active").bind('wheel DOMMouseScroll', function (event) {
-//   if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
-//     $('html').stop().animate({ scrollTop: $('.product_swiper01').offset().top - menu_h}, 400);
-//   }
-// });
-// $(".product_swiper03 .swiper-slide01.swiper-slide-active").bind('wheel DOMMouseScroll', function (event) {
-//   if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
-//     $('html').stop().animate({ scrollTop: $('.product_swiper02').offset().top - menu_h }, 400);
-//   }
-// });
-
-$(".section_visual").on('wheel DOMMouseScroll', function (event) {
-  if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
-    $('html').stop().animate({ scrollTop: $('.product01_sec').offset().top }, 400);
-    $('#header').addClass('fixed');
-  }
 });
 
+function mousewheelE(){
+  $(window).on('wheel DOMMouseScroll', function () {
+    var menu_h = document.querySelector("#header").clientHeight
+      $('.sec01_01').on('mousewheel DOMMouseScroll', function (event) {
+        if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+          product_swiper.mousewheel.disable()
+          $('html').stop().animate({ scrollTop: $('.section_visual').offset().top - menu_h}, 600);
+        }else {
+          product_swiper.mousewheel.enable()
+        }
+      })
+      $('.sec01_03').on('mousewheel DOMMouseScroll', function (event) {
+        if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+          product_swiper.mousewheel.enable()
+        }else {
+          $('html').stop().animate({ scrollTop: $('.product02_sec').offset().top}, 600);
+          product_swiper.slideTo(0, 500, false)
+          product_swiper.mousewheel.disable()
+        }
+      })
+      $('.sec02_01').on('mousewheel DOMMouseScroll', function (event) {
+        if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+          product_swiper02.mousewheel.disable()
+          $('html').stop().animate({ scrollTop: $('.product01_sec').offset().top  - menu_h}, 600);
+        }else {
+          product_swiper02.mousewheel.enable()
+        }
+      })
+      $('.sec02_02').on('mousewheel DOMMouseScroll', function (event) {
+        if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+          product_swiper02.mousewheel.enable()
+
+        }else {
+          $('html').stop().animate({ scrollTop: $('.product03_sec').offset().top}, 600);
+          product_swiper02.slideTo(0, 500, false)
+          product_swiper02.mousewheel.disable()
+        }
+      })
+      $('.sec03_01').on('mousewheel DOMMouseScroll', function (event) {
+        if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+          product_swiper03.mousewheel.disable()
+          $('html').stop().animate({ scrollTop: $('.product02_sec').offset().top  - menu_h}, 600);
+        }else {
+          product_swiper03.mousewheel.enable()
+        }
+      })
+      $('.sec03_02').on('mousewheel DOMMouseScroll', function (event) {
+        if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+          product_swiper03.mousewheel.enable()
+        }else {
+          $('html').stop().animate({ scrollTop: $('.partner_sec').offset().top}, 600);
+          product_swiper03.slideTo(0, 500, false)
+          product_swiper03.mousewheel.disable()
+        }
+      })
+
+      $(".section_visual").on('wheel DOMMouseScroll', function (event) {
+        if (event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0) {
+          $('html').stop().animate({ scrollTop: $('.product01_sec').offset().top }, 400);
+        }
+      });
+      $(".partner_sec").on('wheel DOMMouseScroll', function (event) {
+        if (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) {
+          $('html').stop().animate({ scrollTop: $('.product03_sec').offset().top - menu_h}, 400);
+        }
+      });
+  })
+}
+
+let delay = 300;
+let timer = null;
+
+$(window).on('resize', function(){
+	clearTimeout(timer);
+	timer = setTimeout(function(){
+		console.log('resize event!');
+        if (window.innerWidth <= 1024) {
+          product_swiper.mousewheel.disable()
+          product_swiper02.mousewheel.disable()
+          product_swiper03.mousewheel.disable()
+    	}
+	}, delay);
+});
 
 
 //faq accordion event
