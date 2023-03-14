@@ -1,10 +1,7 @@
 $(document).ready(function () {
-  prevent_a();
   accordion();
   mousewheelE();
 });
-
-
 
 var visual_swiper = new Swiper(".visual_swiper", {
   autoplay: {
@@ -140,21 +137,6 @@ function mousewheelE(){
       });
   })
 }
-
-let delay = 300;
-let timer = null;
-
-$(window).on('resize', function(){
-	clearTimeout(timer);
-	timer = setTimeout(function(){
-		console.log('resize event!');
-        if (window.innerWidth <= 1024) {
-          product_swiper.mousewheel.disable()
-          product_swiper02.mousewheel.disable()
-          product_swiper03.mousewheel.disable()
-    	}
-	}, delay);
-});
 
 
 //faq accordion event
