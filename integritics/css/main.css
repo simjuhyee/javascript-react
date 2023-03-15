@@ -342,8 +342,8 @@
   background: #101010 !important;
 }
 
-.product_swiper .swiper_controller .swiper-button-prev,
-.product_swiper .swiper_controller .swiper-button-next {
+.product_sec .swiper-button-prev,
+.product_sec .swiper-button-next {
   display: none;
 }
 

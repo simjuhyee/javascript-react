@@ -53,11 +53,10 @@
                 <h3>요금안내</h3>
             </div>
 
-
             <div class="section sec01">
-                <div class="section_inner">
-                    <ul class="price_list">
-                        <li class="price_item">
+                <div class="swiper mySwiper section_inner">
+                    <div class="swiper-wrapper price_list">
+                        <div class="swiper-slide price_item">
                             <div class="item_head">
                                 <p class="item_title"><strong>Free</strong></p>
                                 <p class="item_desc">소규모 프로젝트로 일하는 신생 스타트업 및 개별
@@ -77,8 +76,8 @@
                                     <li>25MB</li>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="price_item">
+                        </div>
+                        <div class="swiper-slide price_item">
                             <div class="item_head">
                                 <p class="item_title"><strong>Standard</strong></p>
                                 <p class="item_desc">프로젝트 중심으로 일하는 작은 규모의 기업 및
@@ -101,8 +100,8 @@
                                     <li>레포트 전자결재</li>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="price_item">
+                        </div>
+                        <div class="swiper-slide price_item">
                             <div class="item_head">
                                 <p class="item_title"><strong>Advanced</strong></p>
                                 <p class="item_desc">부서 간 협업을 필요로 하는 중소 기업 및 중견
@@ -124,8 +123,8 @@
                                     <li>사용자당 20GB 저장 공간</li>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="price_item">
+                        </div>
+                        <div class="swiper-slide price_item">
                             <div class="item_head">
                                 <p class="item_title"><strong>Enterprise</strong></p>
                                 <p class="item_desc">부서 간 협업, 전사적 프로젝트, 보안과 관리 및 확장성
@@ -147,10 +146,10 @@
                                     <li>사용자당 20GB 저장 공간</li>
                                 </ul>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                        </ul>
+                    </div>
                 </div>
-            </div>
         </main>
 
         <section class="section section_banner">
@@ -240,6 +239,41 @@
 
     var map = new kakao.maps.Map(container, options);
   </script> -->
+
+        <script>
+            var swiper = null;
+
+
+            function initSwiper() {
+                var swiper = new Swiper(".section_inner", {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    breakpoints: {
+                        1400: {
+                            slidesPerView: 4,
+                            spaceBetween: 0,
+                        },
+                        1024: {
+                            slidesPerView: 2,
+                            spaceBetween: 0,
+                        }
+                    },
+                });
+            }
+
+            var timer;
+
+            window.addEventListener('resize', function () {
+                if (timer) {
+                    clearTimeout(timer);
+                }
+
+                timer = setTimeout(initSwiper, 100);
+            });
+
+            initSwiper();
+
+        </script>
 </body>
 
 </html>

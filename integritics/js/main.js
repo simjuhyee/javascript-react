@@ -39,14 +39,6 @@ $(window).resize(function(){
 
 
 function mousewheelE(){
-  function changeImg() {
-    if ( $(this).find('.swiper-slide-active').hasClass('dark') ) {
-      $('#navbar').addClass('darknav')
-    } else {
-      $('#navbar').removeClass('darknav');
-    }
-  }
-
   var product_swiper = new Swiper(".product_swiper01", {
     direction: "vertical",
     mousewheel: false,

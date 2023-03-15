@@ -1,44 +1,238 @@
-.section {position: relative;overflow: hidden;}
-.section_inner {width: 1628px;margin: 0 auto;}
-.section .text_box .title {position: relative;display: inline-block;font-size: 52px;line-height: 1;font-weight: 600;}
-.section .text_box .title::after {content: '';position: absolute;bottom: 36px;right: -35px;width: 20px;height: 20px;border-radius: 50%;background-color: #ff505a;}
-.section .text_box .sub-title {font-size: 30px;font-weight: 600;color: #6b7684;line-height: 51px;}
-.section .text_box .desc {font-size: 22px;line-height: 36px;color: #191F28;}
-
-.top_title {display: flex;justify-content: center;align-items: center;width: 100%;height: 26.25rem;-webkit-background-size: cover !important;background-size: cover !important;background: url(../img/information/title_bg.png) no-repeat center;}
-.top_title h3 {font-size: 90px;font-weight: 600;color: #fff;}
-
-.sec01 {-webkit-background-size: cover !important;background-size: cover !important;background: url(../img/information/sec01_bg.png) no-repeat center;}
-.sec01 .section_inner {width: 1628px;margin: 0 auto;padding: 100px 0;}
-.sec01 .price_list {display: flex;flex-wrap: wrap;margin-left: -35px;}
-.sec01 .price_list .price_item {width: calc((100% - 140px) / 4);min-height: 824px;margin-left: 35px;padding: 40px;background: #FFFFFF;box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1), inset -6px -6px 20px rgba(0, 0, 0, 0.04);border-radius: 24px;}
-.sec01 .price_list .price_item .item_head {position: relative;min-height: 331px;padding-bottom: 20px;}.sec01 .price_list .price_item .head_bottom {width: 100%;position: absolute;bottom: 20px;left: 0;}
-.sec01 .price_list .price_item .item_title {font-weight: 500;font-size: 24px;color: #191F28;}
-.sec01 .price_list .price_item .item_desc {margin-top: 7px;font-size: 14px;line-height: 20px;color: #6B7684;}
-.sec01 .price_list .price_item .item_price {margin-top: 82px;}
-.sec01 .price_list .price_item .item_head .item_notice {margin-top: 82px;font-size: 12px;line-height: 18px;color: #6D71F9;}
-.sec01 .price_list .price_item .item_price strong {font-weight: 600;font-size: 36px;line-height: 38px;color: #191F28;}
-.sec01 .price_list .price_item .item_btn {display: block;width: 100%;margin-top: 20px;padding: 22px 0;border-radius: 62px;background-color: #3170E2;font-size: 16px;font-weight: 600;color: #fff;text-align: center;}
-.sec01 .price_list .price_item .item_btn.type02 {background-color: #6D71F9;}
-.sec01 .price_list .price_item .item_body {border-top: 1px dashed rgba(0, 0, 0, 0.1);}
-.sec01 .price_list .price_item .item_body .item_notice {margin-top: 20px;font-size: 12px;line-height: 1;font-weight: bold;color: #FF505A;}
-.sec01 .price_list .price_item .item_body ul {margin-top: 20px;}
-.sec01 .price_list .price_item .item_body ul li {position: relative;height: 34px;margin-bottom: 12px;padding-left: 44px;font-size: 14px;font-weight: bold;line-height: 34px;color: #6B7684;}
-.sec01 .price_list .price_item .item_body ul li::after {content: '';position: absolute;top: 0;left: 0;width: 34px;height: 34px;background: url("../img/information/sec01_checkbox.png") no-repeat;background-size: cover !important;}
-
-@media all and (max-width:1630px) {
-    .section_inner {width: 92% !important;}
-    .sec01 .price_list { margin-left: -18px;}
-    .sec01 .price_list .price_item {width: calc((100% - 72px) / 4);margin-left: 18px;margin-bottom: 18px;}
+.section {
+    position: relative;
+    overflow: hidden;
 }
-  
-@media all and (max-width:1400px) {
-    .top_title h3 {font-size: 55px;}
-    .section .text_box .title {font-size: 28px;}
-    .section .text_box .title::after {width: 12px; height: 12px; bottom: 18px; right: -21px;}
-    .section .text_box .sub-title {margin-top: 32px;font-size: 18px;line-height: 28px;}
-    .section .text_box .desc{margin-top: 32px;font-size: 18px;}
-    .sec01 .section_inner {padding: 62px 0;}
-    .sec01 .price_list .price_item {width: calc((100% - 36px) / 2);margin-left: 18px;}
-}  
 
+.section_inner {
+    width: 1628px;
+    margin: 0 auto;
+}
+
+.section .text_box .title {
+    position: relative;
+    display: inline-block;
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.section .text_box .title::after {
+    content: '';
+    position: absolute;
+    bottom: 36px;
+    right: -35px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff505a;
+}
+
+.section .text_box .sub-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #6b7684;
+    line-height: 51px;
+}
+
+.section .text_box .desc {
+    font-size: 22px;
+    line-height: 36px;
+    color: #191F28;
+}
+
+.top_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 26.25rem;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background: url(../img/information/title_bg.png) no-repeat center;
+}
+
+.top_title h3 {
+    font-size: 90px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.sec01 {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    background: url(../img/information/sec01_bg.png) no-repeat center;
+}
+
+.sec01 .section_inner {
+    width: 1628px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.sec01 .price_list {
+    display: flex;
+    margin-left: -35px;
+}
+
+.sec01 .price_list .price_item {
+    width: calc((100% - 140px) / 4);
+    min-height: 824px;
+    margin-left: 35px;
+    padding: 40px;
+    background: #FFFFFF;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1), inset -6px -6px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 24px;
+}
+
+.sec01 .price_list .price_item .item_head {
+    position: relative;
+    min-height: 331px;
+    padding-bottom: 20px;
+}
+
+.sec01 .price_list .price_item .head_bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+}
+
+.sec01 .price_list .price_item .item_title {
+    font-weight: 500;
+    font-size: 24px;
+    color: #191F28;
+}
+
+.sec01 .price_list .price_item .item_desc {
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6B7684;
+}
+
+.sec01 .price_list .price_item .item_price {
+    margin-top: 82px;
+}
+
+.sec01 .price_list .price_item .item_head .item_notice {
+    margin-top: 82px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #6D71F9;
+}
+
+.sec01 .price_list .price_item .item_price strong {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 38px;
+    color: #191F28;
+}
+
+.sec01 .price_list .price_item .item_btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 22px 0;
+    border-radius: 62px;
+    background-color: #3170E2;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.sec01 .price_list .price_item .item_btn.type02 {
+    background-color: #6D71F9;
+}
+
+.sec01 .price_list .price_item .item_body {
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.sec01 .price_list .price_item .item_body .item_notice {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: bold;
+    color: #FF505A;
+}
+
+.sec01 .price_list .price_item .item_body ul {
+    margin-top: 20px;
+}
+
+.sec01 .price_list .price_item .item_body ul li {
+    position: relative;
+    height: 34px;
+    margin-bottom: 12px;
+    padding-left: 44px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 34px;
+    color: #6B7684;
+}
+
+.sec01 .price_list .price_item .item_body ul li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    background: url("../img/information/sec01_checkbox.png") no-repeat;
+    background-size: cover !important;
+}
+
+/*
+@media all and (max-width:1630px) {
+    .section_inner {
+        width: 92% !important;
+    }
+
+    .sec01 .price_list {
+        margin-left: -18px;
+    }
+
+    .sec01 .price_list .price_item {
+        width: calc((100% - 72px) / 4);
+        margin-left: 18px;
+        margin-bottom: 18px;
+    }
+}
+
+@media all and (max-width:1400px) {
+    .top_title h3 {
+        font-size: 55px;
+    }
+
+    .section .text_box .title {
+        font-size: 28px;
+    }
+
+    .section .text_box .title::after {
+        width: 12px;
+        height: 12px;
+        bottom: 18px;
+        right: -21px;
+    }
+
+    .section .text_box .sub-title {
+        margin-top: 32px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .section .text_box .desc {
+        margin-top: 32px;
+        font-size: 18px;
+    }
+
+    .sec01 .section_inner {
+        padding: 62px 0;
+    }
+
+    .sec01 .price_list .price_item {
+        width: calc((100% - 36px) / 2);
+        margin-left: 18px;
+    }
+} */
