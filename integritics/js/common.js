@@ -33,7 +33,7 @@ function modal() {
 
 function headerE() {
   var header = $('#header')
-  $(window).bind('wheel DOMMouseScroll', function (event) {
+  $(window).on('wheel DOMMouseScroll', function (event) {
     let scroll = $(window).scrollTop();
     if (scroll > 0) {
       header.addClass('fixed')
@@ -41,6 +41,28 @@ function headerE() {
         header.addClass('scroll')
       } else {
         header.removeClass('scroll')
+      }
+    } else {
+      header.removeClass('scroll')
+      header.removeClass('fixed')
+    }
+  });
+
+
+  $(document).on('touchstart', function (e){
+    ts = e.originalEvent.touches[0].clientY;
+  });
+
+  $(document).on('touchend', function (e){
+    var scroll = $(window).scrollTop();
+    var te = e.originalEvent.changedTouches[0].clientY;
+
+    if (scroll > 0){
+      header.addClass('fixed')
+      if(ts > te+5){
+        header.removeClass('scroll')
+      }else if(ts < te-5){
+        header.addClass('scroll')
       }
     } else {
       header.removeClass('scroll')
