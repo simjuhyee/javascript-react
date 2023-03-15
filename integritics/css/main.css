@@ -536,10 +536,10 @@
 
 .faq_sec .faq_list {
   margin-top: 3.125vw;
+  border-top: 0.052vw solid #e0e0e0;
 }
 
 .faq_sec .faq_list .list_item {
-  border-top: 0.052vw solid #e0e0e0;
   border-bottom: 0.052vw solid #e0e0e0;
 }
 
@@ -633,7 +633,7 @@
   }
 
   .section .text_box .sub-title {
-    font-size: 3.333vw;
+    font-size: 3.333vw !important;
   }
 
   .section .text_box .desc {
@@ -962,13 +962,13 @@
   }
 
   .contact_sec address.desc {
-    max-width: 92%;
+    max-width: 100%;
     font-size: 3.333vw !important;
   }
 
   .contact_sec address.desc p,
   .contact_sec address.desc li a {
-    font-size: 3.333vw;
+    font-size: 3.333vw !important;
     line-height: 1;
     color: #191F28;
     font-weight: 500;
@@ -1009,10 +1009,10 @@
 
   .faq_sec .faq_list {
     margin-top: 7.500vw;
+    border-top: 0.278vw solid #e0e0e0;
   }
 
   .faq_sec .faq_list .list_item {
-    border-top: 0.278vw solid #e0e0e0;
     border-bottom: 0.278vw solid #e0e0e0;
   }
 

@@ -39,8 +39,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: 16.250vw;
+  height: 26.0417vw;
   -webkit-background-size: cover !important;
   background-size: cover !important;
   background: url(../img/technology/title_bg.png) no-repeat center;
@@ -111,11 +112,10 @@
 }
 
 .section .section_inner .text_area {
-  display: inline-block;
   display: flex;
   align-items: center;
   width: calc(50vw - 8.5px);
-  padding: 0 7.65%;
+  padding: 0 7.05%;
 }
 
 .section .section_inner .text_area .sub-title {
@@ -197,4 +197,162 @@
 .sec11 .section_inner .img_area {
   background-size: cover !important;
   background: url(../img/technology/tab01_sec11_bg.png) no-repeat center;
+}
+
+
+@media all and (max-width:1024px) {
+  .section_inner {
+    width: 88.8889vw;;
+  }
+
+  .section .text_box .title {
+    font-size: 7.778vw;
+  line-height: 10.000vw  ;
+  }
+
+  .section .text_box .title::after {
+    bottom: 6.767vw;
+    right: -4.167vw;
+    height: 2.778vw;
+    width: 2.778vw;
+  }
+
+  .section .text_box .sub-title {
+    font-size: 4.444vw;
+    line-height: 6.111vw;
+  }
+
+  .section .text_box .desc {
+    font-size: 3.543vw;
+    line-height: 5.556vw;
+  }
+
+  .top_title {
+    width: 100%;
+    height: 42.222vw;
+    background: url(../img/technology/title_bg_m.png) no-repeat center;
+  }
+
+  .top_title h3 {
+    font-size: 6.667vw
+  }
+
+  .top_title .sub_list {
+    display: none;
+  }
+
+  
+  .sec03 .section_inner,
+  .sec05 .section_inner,
+  .sec08 .section_inner,
+  .sec11 .section_inner {
+    flex-direction: column-reverse !important;
+  }
+  
+  .section .section_inner {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .section .section_inner .img_area {
+    position: relative;
+    width: 100vw;
+    height: 91.111vw;
+    background-color: #3170E2;
+  }
+  
+  .section .section_inner .img_area img {
+    position: absolute;
+  top: 11.667vw;
+  display: block;
+  width: 44.444vw;
+  height: 91.111vw;
+}
+
+.section .section_inner .text_area {
+  display: block;
+  width: 100vw;
+  height: 126.111vw;
+  padding: 25.556vw 5.556vw 0;
+}
+
+.section .section_inner .text_area .sub-title {
+  margin-top: 8.889vw;
+}
+
+.section .section_inner .text_area .desc {
+  margin-top: 1.7708vw;
+}
+
+ 
+.sec01 {
+  background-size: 100% !important;
+  background: url(../img/technology/tab01_sec01_bg_m.png) no-repeat center;
+}
+
+.sec01 .section_inner {
+  display: block;
+  width: calc(100vw - 11.111vw);
+  margin: 0 auto;
+  padding: 10.556vw 0 41.278vw 0;
+}
+
+.sec01 .text_box .desc {
+  margin-top: 6.111vw  ;
+}
+
+
+.sec04 .section_inner .img_area {
+  background-size: cover !important; 
+  background: url(../img/technology/tab01_sec04_bg.png) no-repeat center
+}
+
+.sec05 .section_inner .img_area {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec05_bg.png) no-repeat center
+}
+
+.sec06 {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec06_bg.png) no-repeat center;
+}
+
+.sec06 .section_inner {
+  width: 92.117vw;
+  margin: 0 auto;
+  padding: 8.8889vw 0 42.7778vw;
+}
+
+.sec06 .text_box .desc {
+  margin-top: 12.2222vw;
+}
+
+.sec07 .img_area {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec07_bg.png) no-repeat center;
+}
+
+.sec08 .section_inner .img_area {
+  background-color: #E7AD18;
+}
+
+.sec09 {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec09_bg.png) no-repeat center;
+}
+
+.sec09 .section_inner {
+  width: 84.7917vw;
+  margin: 0 auto;
+  padding: 8.8889vw 0 42.7778vw;
+}
+
+.sec09 .text_box .desc {
+  margin-top: 3.8021vw;
+}
+
+.sec11 .section_inner .img_area {
+  background-size: cover !important;
+  background: url(../img/technology/tab01_sec11_bg.png) no-repeat center;
+}
 }
