@@ -14,6 +14,11 @@ function menuE() {
       $(".mo_menu").animate({ right: "-100%" })
     });
   });
+
+  $('.sub_list').on('click', function(e){
+    $(this).next().slideToggle(300);
+    e.preventDefault();
+  })
 }
 
 
