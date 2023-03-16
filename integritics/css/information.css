@@ -267,17 +267,22 @@
         margin-left: 0;
     }
     .sec01 .section_inner {
+        width: 100vw;
+        margin: 0 !important;
         padding: 13.8889vw 0 5.5556vw;
     }
 
     .sec01 .price_list .price_item {
-        width: 100% !important;
+        width: 88.8889vw
+ !important;
         min-height: auto;
-        margin-left: 0;
+        margin: 0 5.5556vw !important;
         padding: 11.1111vw;
         border-radius: 6.6667vw;
     }
-
+    .sec01 .price_list .price_item:first-child {
+        margin-left: 0;
+    }
     .sec01 .price_list .price_item .item_head {
 
         min-height: 91.9444vw;
@@ -366,8 +371,8 @@
         left: 0;
         width: 9.4444vw;
         height: 9.4444vw;
-        background: url("../img/information/sec01_checkbox_m.png") no-repeat;
-        background-size: 100% !important;
+        background: url("../img/information/sec01_checkbox_m.jpg") no-repeat;
+        background-size: contain !important;
     }
 
     .sec01 .swiper-horizontal>.swiper-scrollbar,
