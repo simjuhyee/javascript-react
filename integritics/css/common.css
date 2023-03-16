@@ -235,10 +235,28 @@ textarea {
 .modal_wrap {z-index: 99999;position: fixed;top: 50%;left: 50%;border-radius: 16px;background: #ffffff;box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);}
 .modal_contents {overflow: hidden;position: relative;width: 600px;padding: 40px 40px 20px;}
 .modal_head h3 {font-size: 26px;font-weight: bold;}
-.modal_head .close_btn {z-index: 2;position: absolute;right: 5.556vw;top: 5.556vw;font-size: 0;border: 0;cursor: pointer;}
-  .modal_head .close_btn .close {display: flex;align-items: center;justify-content: center;width: 4.722vw;height: 4.722vw;}
+.modal_head .close_btn {    z-index: 2;
+  position: absolute;
+  right: 1.556vw;
+  top: 1.556vw;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;}
+  .modal_head .close_btn .close {    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.722vw;
+    height: 4.722vw;
+}
   .modal_head .close_btn .close:before,
-  .modal_head .close_btn .close:after {content: '';position: absolute;left: 50%;height: 4.778vw;width: 0.556vw; margin-left: 0.275vw; border-radius: 0.556vw; background-color: #6B7684;}
+  .modal_head .close_btn .close:after {    content: '';
+    position: absolute;
+    left: 50%;
+    height: 2.178vw;
+    width: 0.226vw;
+    margin-left: 0.275vw;
+    border-radius: 0.556vw;
+    background-color: #6B7684;}
   .modal_head .close_btn .close:before {transform: rotate(45deg);}
   .modal_head .close_btn .close:after {transform: rotate(-45deg);}
 .modal_body {margin-top: 30px;}
@@ -292,13 +310,13 @@ textarea {
   #mo_gnb .mo_menu>.mo_list {margin-top: 10vw; background-color: #fff;width: 100%;}
   #mo_gnb .mo_menu>.mo_list>li {background: #fff;}
   #mo_gnb .mo_menu>.mo_list>li>a {position: relative;display: block;padding: 6.944vw 8.333vw;font-size: 6.111vw;line-height: 1;color: #000; font-weight: 500;z-index: 10;}
-  #mo_gnb .mo_menu>.mo_list .sub_list + ul {display: none;}
+  #mo_gnb .mo_menu>.mo_list .sub_list + ul {display: block;}
   #mo_gnb .mo_menu>.mo_list .sub_list + ul > li a {position:relative; display:block; padding: 4.1667vw 0 4.1667vw 15vw; font-size:4.4444vw; font-weight:500; color:#6B7684;}
   #mo_gnb .mo_menu>.mo_list .sub_list + ul > li a::after {content: ''; position:absolute; top:50%; left: 9.7222vw
     ; width:3.0556vw; height:3.0556vw; margin-top:-1.525vw; background:url(../img/sub_list_icon.png) no-repeat center; background-size:100% ;}
 
   /* section banner */
-.section_banner::after {top: 3.889vw; right: -17.778vw; width: 100vw; height: 67.778vw; background: url(../img/section07_bg_m.png) no-repeat bottom;}
+.section_banner::after {top: 3.889vw; right:0; width: 100vw; height: 67.778vw; background: url(../img/section07_bg_m.png) no-repeat bottom; background-size: 100%;}
 .section_banner .section_inner {width: calc(100vw - 11.111vw) !important; padding: 13.889vw 0 17.778vw;}
 .section_banner .section_inner .banner_text {font-size: 3.889vw;line-height: 6.667vw;color: #fff;}
 .section_banner .section_inner .banner_btn {padding: 5.000vw 10.556vw;margin-top: 8.889vw;border-radius: 11.667vw;font-size: 3.889vw;}
@@ -328,6 +346,12 @@ textarea {
 .item_input {width: 100%;margin-top: 6.9444vw; border-bottom: 0.2778vw solid rgba(0, 0, 0, 0.1);font-size: 3.8889vw;line-height: 5vw;}
 .modal_btn {padding: 5.000vw 10.556vw;margin-top: 3.889vw;border-radius: 11.667vw;font-size: 3.889vw;}
 
+.modal_head .close_btn {z-index: 2;position: absolute;right: 5.556vw;top: 5.556vw;font-size: 0;border: 0;cursor: pointer;}
+.modal_head .close_btn .close {display: flex;align-items: center;justify-content: center;width: 4.722vw;height: 4.722vw;}
+.modal_head .close_btn .close:before,
+.modal_head .close_btn .close:after {content: '';position: absolute;left: 50%;height: 4.778vw;width: 0.556vw; margin-left: 0.275vw; border-radius: 0.556vw; background-color: #6B7684;}
+.modal_head .close_btn .close:before {transform: rotate(45deg);}
+.modal_head .close_btn .close:after {transform: rotate(-45deg);}
 .filter {position: fixed;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);}
 .modal.show {visibility: visible;opacity: 1;}
 .modal.show .modal_wrap {transition: transform 0.3s ease-out;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);}

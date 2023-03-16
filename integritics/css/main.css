@@ -783,7 +783,7 @@
   .product_sec .sec_list {
     position: static;
     width: 100vw;
-    height: 139.4444vw;
+    height: 106.6667vw;
   }
 
   .product_swiper .swiper-wrapper {
@@ -817,15 +817,17 @@
 
   .product_swiper .swiper_controller {
     position: absolute;
-    top: 0;
+    top: 22vw;
     right: auto;
-    left: 5.556vw;
+    left: -14.444vw;
     width: 50%;
     margin-left: 0;
   }
 
   .product_swiper .swiper_controller .swiper-scrollbar {
-    height: 41.667vw !important;
+    width: 41.667vw !important;
+    height: 0.5556vw !important;
+    transform: rotate(0) !important;
   }
 
 
@@ -862,7 +864,7 @@
   }
 
   .product02_sec .sec_list {
-    height: 139.4444vw;
+    height: 123.3333vw;
   }
 
   .product02_sec .section_inner {
@@ -875,7 +877,7 @@
   }
 
   .product02_sec .product_swiper .swiper_controller.type02 {
-    left: 5.556vw;
+    left: -13.444vw;
   }
 
   .product_swiper .swiper-slide02 .sec_item {
@@ -888,7 +890,7 @@
   }
 
   .product03_sec .sec_list {
-    height: 151.9444vw;
+    height: 130.2778vw;
   }
 
   .product03_sec .product_swiper .swiper_controller.type02 {

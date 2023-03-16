@@ -74,7 +74,8 @@
 
 .sec01 .price_list {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    height: auto !important;
     margin-left: -1.8229vw;
 }
 
@@ -237,13 +238,15 @@
 
 @media all and (max-width:1400px) {
     .sec01 .price_list {
-        margin-left: -0.9375vw;
+        flex-wrap: nowrap;
+        margin-left: -3.3333vw;
     }
 
     .sec01 .price_list .price_item {
-        width: calc((100% - 1.8750vw) / 2) !important;
+        width: calc((100% - 6.6666vw) / 2) !important;
         min-height: 44.0714vw;
-        margin-left: 0.9375vw;
+        margin-left: 3.333vw;
+        margin-top: 3.333vw;
     }
 }
 
@@ -270,6 +273,7 @@
         min-height: auto;
         margin-left: 0;
         padding: 11.1111vw;
+        border-radius: 6.6667vw;
     }
 
     .sec01 .price_list .price_item .item_head {
@@ -305,7 +309,7 @@
     .sec01 .price_list .price_item .item_head .item_notice {
         margin-top: 4.2708vw;
         font-size: 3.3333vw;
-        line-height: 3.3333vw;
+        line-height: 4.3333vw;
 
 
     }
@@ -360,7 +364,7 @@
         left: 0;
         width: 9.4444vw;
         height: 9.4444vw;
-        background: url("../img/information/sec01_checkbox.png") no-repeat;
+        background: url("../img/information/sec01_checkbox_m.png") no-repeat;
         background-size: 100% !important;
     }
 

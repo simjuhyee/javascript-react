@@ -160,8 +160,8 @@
                     </div>
                 </div>
                 <div class="swiper-scrollbar"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
             </div>
             <section class="section section_banner">
                 <div class="section_inner common_inner">
@@ -258,10 +258,7 @@
                 observeParents: true,
                 autoHeight: true,
                 spaceBetween: 40,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: " .swiper-button-prev",
-                },
+    
                 scrollbar: {
                     el: ".swiper-scrollbar",
                     hide: false,
@@ -272,7 +269,7 @@
                         spaceBetween: 0,
                     },
                     1024: {
-                        slidesPerView: 2,
+                        slidesPerView: 4,
                         spaceBetween: 0,
                     }
                 }

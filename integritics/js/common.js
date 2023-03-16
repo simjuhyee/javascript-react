@@ -15,11 +15,6 @@ function menuE() {
       $('html, body').removeClass('not_scroll');
       $(".mo_menu").animate({ right: "-100%" })
     });
-
-  $('.sub_list').on('click', function(e){
-    $(this).next().slideToggle(300);
-    e.preventDefault();
-  })
 }
 
 
@@ -31,6 +26,10 @@ function modal() {
   });
   $('.contact_modal').on('click', function (e) {
     if (e.target.className == 'filter' || e.target.className == 'modal_btn') {
+      $(".contact_modal").removeClass('show')
+      $('html, body').removeClass('not_scroll');
+    }
+    if(e.target.className == 'close'){
       $(".contact_modal").removeClass('show')
       $('html, body').removeClass('not_scroll');
     }
