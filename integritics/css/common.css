@@ -235,6 +235,12 @@ textarea {
 .modal_wrap {z-index: 99999;position: fixed;top: 50%;left: 50%;border-radius: 16px;background: #ffffff;box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);}
 .modal_contents {overflow: hidden;position: relative;width: 600px;padding: 40px 40px 20px;}
 .modal_head h3 {font-size: 26px;font-weight: bold;}
+.modal_head .close_btn {z-index: 2;position: absolute;right: 5.556vw;top: 5.556vw;font-size: 0;border: 0;cursor: pointer;}
+  .modal_head .close_btn .close {display: flex;align-items: center;justify-content: center;width: 4.722vw;height: 4.722vw;}
+  .modal_head .close_btn .close:before,
+  .modal_head .close_btn .close:after {content: '';position: absolute;left: 50%;height: 4.778vw;width: 0.556vw; margin-left: 0.275vw; border-radius: 0.556vw; background-color: #6B7684;}
+  .modal_head .close_btn .close:before {transform: rotate(45deg);}
+  .modal_head .close_btn .close:after {transform: rotate(-45deg);}
 .modal_body {margin-top: 30px;}
 .modal_item {margin-top: 20px;}
 .modal_item textarea {width: 100% !important;height: 86px !important;border: none;resize: none;border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
