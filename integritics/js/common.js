@@ -3,17 +3,18 @@ $(document).ready(function () {
   menuE();
   headerE()
 });
-
 // mo version menu event
 function menuE() {
   $(".sitemap_btn").on("click", function () {
     $("#mo_gnb").addClass("on");
+    $('html, body').addClass('not_scroll');
     $(".mo_menu").animate({ right: "0" })
+  });
     $(".close_btn").on("click", function () {
       $("#mo_gnb").removeClass("on");
+      $('html, body').removeClass('not_scroll');
       $(".mo_menu").animate({ right: "-100%" })
     });
-  });
 
   $('.sub_list').on('click', function(e){
     $(this).next().slideToggle(300);
@@ -25,11 +26,13 @@ function menuE() {
 function modal() {
   $("a.contact").on("click", function (e) {
     $(".contact_modal").addClass('show')
+    $('html, body').addClass('not_scroll');
     e.preventDefault();
   });
   $('.contact_modal').on('click', function (e) {
     if (e.target.className == 'filter' || e.target.className == 'modal_btn') {
       $(".contact_modal").removeClass('show')
+      $('html, body').removeClass('not_scroll');
     }
     e.preventDefault();
   })

@@ -177,7 +177,7 @@ textarea {
   font-family: "Noto Sans KR", sans-serif;
 }
 /* //reset css */
-
+.not_scroll{overflow:hidden !important; touch-action:none;}
 .br_pc {display: block;}
 .br_mo {display: none;}
 #wrap {overflow: hidden; width: 100%;min-width: 16.667vw;font-size: 0.938vw;}
