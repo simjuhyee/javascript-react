@@ -238,8 +238,8 @@
 
 @media all and (max-width:1400px) {
     .sec01 .price_list {
-        flex-wrap: nowrap;
-        margin-left: -3.3333vw;
+        flex-wrap: wrap;
+        /* margin-left: -3.3333vw; */
     }
 
     .sec01 .price_list .price_item {
@@ -261,7 +261,9 @@
         font-size: 6.667vw
       }
     
+      
     .sec01 .price_list {
+      flex-wrap: nowrap;
         margin-left: 0;
     }
     .sec01 .section_inner {
