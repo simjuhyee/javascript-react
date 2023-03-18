@@ -506,17 +506,23 @@
   font-size: 2.083vw !important;
   color: #6B7684;
 }
+.contact_sec .map_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84.6875vw;
+  height: 37.7083vw;
+  margin-top: 2.6042vw;
+  border: 0.0521vw solid #E0E0E0;
+  border-radius: 1.2500vw;
 
+}
 .contact_sec .map {
-  margin-top: 2.604vw;
+  width: 80.5208vw;
+  height: 33.5417vw;
+  border-radius: 1.0417vw;
 }
 
-/* 임시 지도 이미지 */
-.contact_sec .map img {
-  width: 100%;
-}
-
-/* 임시 지도 이미지 */
 /* section contactUs */
 
 
@@ -988,17 +994,23 @@
     padding-left: 0;
     border: none;
   }
-
+  .contact_sec .map_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 51.3889vw;
+    width: 88.8889vw;
+    margin-top: 4.7222vw;
+    border: 0.2778vw solid #E0E0E0;
+    border-radius: 3.8889vw;
+  
+  }
   .contact_sec .map {
-    margin-top: 2.778vw;
+    height: 46.3889vw;
+    width: 83.3333vw;
+    border-radius: 3.3333vw;
   }
-
-  /* 임시 지도 이미지 */
-  .contact_sec .map img {
-    width: 100%;
-  }
-
-  /* 임시 지도 이미지 */
+  
 
   .faq_sec .section_inner {
     width: calc(100vw - 11.111vw) !important;
