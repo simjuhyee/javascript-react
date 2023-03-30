@@ -128,10 +128,14 @@
 }
 
 .sec01 .price_list .price_item .item_price strong {
+    position: relative;
     font-weight: 600;
     font-size: 1.8750vw;
     line-height: 1.9792vw;
     color: #191F28;
+}
+.sec01 .price_list .price_item .item_price strong.del {
+    text-decoration-line: line-through;
 }
 
 .sec01 .price_list .price_item .item_btn {
@@ -260,8 +264,8 @@
       .top_title h3 {
         font-size: 6.667vw
       }
-    
-      
+
+
     .sec01 .price_list {
       flex-wrap: nowrap;
         margin-left: 0;

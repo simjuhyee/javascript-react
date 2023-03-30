@@ -332,6 +332,7 @@ textarea {
 #footer .footer_inner .footer_info ul li:first-child {padding-left: 0;border-left: 0;}
 #footer .footer_inner .footer_info ul:nth-child(2) li:nth-child(2),
 #footer .footer_inner .footer_info ul:nth-child(2) li:nth-child(4) {border: 0; padding-left: 0;}
+#footer .footer_inner .footer_info ul:nth-child(5) li:last-child {padding: 0; border-left: 0 none;}
 #footer .footer_inner .footer_info .copyright {margin-top: 2vw;}
 
 .floating_btn a {display: none;}
